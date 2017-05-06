@@ -24,7 +24,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().queryOne(map.get("season"));
-			
 			outputResult(t, 200, result);
 		}
 	};
@@ -38,7 +37,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().queryTwo(map.get("category"));
-
 			outputResult(t, 200, result);
 		}
 	};
@@ -53,7 +51,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().queryThree(map.get("category"));
-
 			outputResult(t, 200, result);
 		}
 	};
@@ -68,7 +65,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().queryFour(map.get("category"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -83,7 +79,6 @@ public class HttpHandlerImpl {
 			}
 			String result = OntologyLink.getInstance()
 					.queryFive(map.get("category"), Integer.parseInt(map.get("rank")));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -97,7 +92,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().querySix(map.get("category"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -111,7 +105,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().querySeven(map.get("category"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -125,7 +118,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().queryEight(map.get("category"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -139,7 +131,6 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String result = OntologyLink.getInstance().queryNine(map.get("category"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -154,7 +145,6 @@ public class HttpHandlerImpl {
 			}
 			String result = OntologyLink.getInstance()
 					.queryTen(map.get("category"), map.get("city"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -169,7 +159,6 @@ public class HttpHandlerImpl {
 			}
 			String result = OntologyLink.getInstance()
 					.queryTwelve(map.get("category"), map.get("match"));
-			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -184,7 +173,33 @@ public class HttpHandlerImpl {
 			}
 			String result = OntologyLink.getInstance()
 					.queryThirteen(map.get("category"), Integer.parseInt(map.get("maxPrice")));
-			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryFourteen = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null || map.get("user") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance()
+					.queryFourteen(map.get("user"), map.get("category"));
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryFifteen = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().queryFifteen(map.get("category"));
 			outputResult(t, 200, result);
 		}
 	};
@@ -214,8 +229,6 @@ public class HttpHandlerImpl {
 			outputResult(t, 200, result);
 		}
 	};
-	
-
 	
 	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());

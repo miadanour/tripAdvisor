@@ -19,8 +19,11 @@ public class ServerImpl {
 		server.createContext("/query8", HttpHandlerImpl.queryEight);
 		server.createContext("/query9", HttpHandlerImpl.queryNine);
 		server.createContext("/query10", HttpHandlerImpl.queryTen);
+		//query 11 goes to query 8 with category Sport
 		server.createContext("/query12", HttpHandlerImpl.queryTwelve);
 		server.createContext("/query13", HttpHandlerImpl.queryThirteen);
+		server.createContext("/query14", HttpHandlerImpl.queryFourteen);
+		server.createContext("/query15", HttpHandlerImpl.queryFifteen);
 		
 		server.createContext("/query16", HttpHandlerImpl.querySixteen);
 		server.createContext("/query17", HttpHandlerImpl.querySeventeen);
