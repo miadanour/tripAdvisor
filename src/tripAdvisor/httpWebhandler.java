@@ -8,35 +8,33 @@ import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
-public class httpWebhandler implements HttpHandler {
+import utils.QueryParser;
 
-	@Override
-	public void handle(HttpExchange t) throws IOException {
-		String response = "This is the response";
-		t.sendResponseHeaders(200, response.length());
-		OutputStream os = t.getResponseBody();
-		os.write(response.getBytes());
-		os.close();
-	}
+@SuppressWarnings("restriction")
+public class httpWebhandler implements HttpHandler {
 
 	@SuppressWarnings("restriction")
 	public static void main(String[] args) throws Exception {
 		HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-		server.createContext("/home", new httpWebhandler(){
+		
+		server.createContext("/home1", new HttpHandler(){
 			@Override
 			public void handle(HttpExchange t) throws IOException {
-				String response = "This is the response";
-				
-				String r = t.getRequestURI().getQuery();
-				t.sendResponseHeaders(200, r.length());
-				
-				
+				String x = "hello world";
+				t.sendResponseHeaders(200, x.length());
 				OutputStream os = t.getResponseBody();
-				os.write(r.getBytes());
+				os.write(x.getBytes());
 				os.close();
-				
+
+				System.out.println(QueryParser.getInstance().parse(t.getRequestURI().getQuery()));
 			}
+			
 		});
 		server.start();
+	}
+
+	@Override
+	public void handle(HttpExchange arg0) throws IOException {
+		// TODO Auto-generated method stub
 	}
 }
