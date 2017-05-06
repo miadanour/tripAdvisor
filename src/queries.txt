@@ -24,11 +24,13 @@ WHERE {
 	}
 
 <---------------04----------------->
-SELECT * 
+SELECT ?activity ?rate 
 	WHERE {
-		?activity trip:Type trip:Historical.
-	}
-	ORDER BY Desc(rate)
+		?activity trip:hasCategory trip:Historical.
+		?review trip:rated ?activity.
+		?review trip:rate ?rate .
+	}		
+ORDER BY DESC(?rate)
 
 
 <---------------05----------------->

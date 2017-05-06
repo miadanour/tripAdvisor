@@ -36,26 +36,32 @@ public class OntologyLink {
 		return instance;
 	}
 
-	public String bestSeason(String season) {
+	public String queryOne(String season) {
 		String query = prefix + "SELECT ?city" + "\n" + "WHERE { ?city trip:bestSeason ?season." + "FILTER regex(?season, "
 				+ '"' + season + '"' + ")}";
 		return executeQuery(query);
 	}
 
-	public String hasCategory(String cat) {
-		String query = prefix + "SELECT ?subject" + "WHERE {?subject trip:hasCategory trip:" + cat + " }";
+	public String queryTwo(String cat) {
+		String query = prefix + "SELECT ?subject" + "\n" + "WHERE {?subject trip:hasCategory trip:" + cat + " }";
 		return executeQuery(query);
 	}
 
-	public String includesActivityWithCategory(String cat) {
-		String query = prefix + "SELECT *" + "WHERE {" + "?city rdf:type trip:City.\n"
+	public String queryThree(String cat) {
+		String query = prefix + "SELECT *" + "\n" + "WHERE {" + "?city rdf:type trip:City.\n"
 				+ "?city trip:includes ?activity.\n" + "?activity trip:hasCategory trip:" + cat + "}";
 		return executeQuery(query);
 	}
 
-	public String orderCatbyRank(String cat) {
-		String query = prefix + "SELECT ?activity ?rank" + "WHERE { ?activity trip:hasCategory trip:" + cat + "."
-				+ "?review trip:rated ?activity." + "?review trip:rate ?rank }";
+	public String queryFour(String cat) {
+		String query = prefix + "SELECT ?activity ?rate " + "\n" 
+		+ "WHERE { "
+		+ "?activity trip:hasCategory trip:" + cat + ".\n"
+		+ "?review trip:rated ?activity.\n"
+		+ "?review trip:rate ?rate.\n"
+		+ "}\n"
+		+ "ORDER BY DESC(?rate)";
+					
 		return executeQuery(query);
 	}
 
@@ -84,6 +90,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().hasCategory("Entertainment"));
+		System.out.println(OntologyLink.getInstance().queryFour("Historical"));
 	}
 }
