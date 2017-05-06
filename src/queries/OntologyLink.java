@@ -43,11 +43,11 @@ public class OntologyLink {
 	}
 
 	public String hasCategory(String cat) {
-		String query = prefix + "SELECT ?subject" + "WHERE {?subject trip:hasCategory trip:" + cat + " }";
+		String query = prefix + "SELECT ?subject" + "\n" + "WHERE {?subject rdf:type trip:City." + "?subject trip:hasCategory trip:" + cat + " }";
 		return executeQuery(query, "ativity");
 	}
 
-	public String includes(String cat) {
+	public String includesActivityWithCategory(String cat) {
 		String query = prefix + "SELECT *" + "WHERE {" + "?city rdf:type trip:City.\n"
 				+ "?city trip:includes ?activity.\n" + "?activity trip:hasCategory trip:" + cat + "}";
 		return executeQuery(query, "city");
@@ -73,6 +73,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().bestSeason("Winter"));
+		System.out.println(OntologyLink.getInstance().hasCategory("Entertainment"));
 	}
 }
