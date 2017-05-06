@@ -39,27 +39,38 @@ public class OntologyLink {
 	public String bestSeason(String season) {
 		String query = prefix + "SELECT ?city" + "\n" + "WHERE { ?city trip:bestSeason ?season." + "FILTER regex(?season, "
 				+ '"' + season + '"' + ")}";
-		return executeQuery(query, "city");
+		return executeQuery(query);
 	}
 
 	public String hasCategory(String cat) {
-		String query = prefix + "SELECT ?subject" + "\n" + "WHERE {?subject rdf:type trip:City." + "?subject trip:hasCategory trip:" + cat + " }";
-		return executeQuery(query, "ativity");
+		String query = prefix + "SELECT ?subject" + "WHERE {?subject trip:hasCategory trip:" + cat + " }";
+		return executeQuery(query);
 	}
 
 	public String includesActivityWithCategory(String cat) {
 		String query = prefix + "SELECT *" + "WHERE {" + "?city rdf:type trip:City.\n"
 				+ "?city trip:includes ?activity.\n" + "?activity trip:hasCategory trip:" + cat + "}";
-		return executeQuery(query, "city");
+		return executeQuery(query);
 	}
 
 	public String orderCatbyRank(String cat) {
 		String query = prefix + "SELECT ?activity ?rank" + "WHERE { ?activity trip:hasCategory trip:" + cat + "."
 				+ "?review trip:rated ?activity." + "?review trip:rate ?rank }";
-		return executeQuery(query, "activity");
+		return executeQuery(query);
 	}
 
-	public String executeQuery(String querystr, String wanted) {
+	public String querySixteen(String me){
+		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
+				"WHERE { ?me trip:interestedIn ?interest ." + "\n" + 
+				"?interest trip:type ?type ." + "\n" + 
+				"?activity trip:hasCategory trip:Entertainment ." + "\n" +  
+				"FILTER(REGEX(str(?activity), str(?interest)))}";
+		
+		return executeQuery(query);
+	}
+		
+	
+	public String executeQuery(String querystr) {
 		Query query = QueryFactory.create(querystr);
 		QueryExecution qexec = QueryExecutionFactory.create(query, model);
 
