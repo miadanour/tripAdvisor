@@ -91,7 +91,10 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().querySix(map.get("category"));
+			String maxP = map.get("maxPrice");
+			int iMaxP = maxP == null? -1 : Integer.parseInt(maxP);
+			
+			String result = OntologyLink.getInstance().querySix(map.get("category"), iMaxP);
 			outputResult(t, 200, result);
 		}
 	};

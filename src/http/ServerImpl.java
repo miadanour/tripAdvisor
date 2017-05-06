@@ -26,7 +26,8 @@ public class ServerImpl {
 		server.createContext("/query15", HttpHandlerImpl.queryFifteen);
 		
 		server.createContext("/query16", HttpHandlerImpl.querySixteen);
-		server.createContext("/query17", HttpHandlerImpl.querySeventeen);
+		// query 17 goes to query 6 with category parameter as Entertainment
+		// query 18 goes to query 6 with category parameter as Entertainment and maxPrice with required value
 		
 		server.start();
 		

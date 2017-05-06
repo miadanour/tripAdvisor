@@ -74,14 +74,19 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 	
-	public String querySix(String cat) {
+	public String querySix(String cat, int maxPrice) {
 		String query = prefix + "SELECT ?activity ?start ?end \n "
 				+ "WHERE { "
 				+ "?activity trip:hasCategory trip:"+cat+"."
 				+ "?activity trip:startTime ?start."
 				+ "?activity trip:endTime ?end."
+				+ "?activity trip:price ?price."
 				+ "FILTER(?start < 17) ."
-				+ "FILTER(?end > 6) }";
+				+ "FILTER(?end > 6) ";
+		if (maxPrice != -1)
+			query +=  ".FILTER(?price < "+ maxPrice +")}";
+		else 
+			query += "}";
 					
 		return executeQuery(query);
 	}
@@ -209,5 +214,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
+		System.out.println(OntologyLink.getInstance().querySix("Food", 100));
 	}
 }

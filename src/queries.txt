@@ -137,6 +137,16 @@ SELECT *
 		filter(?start > 5 && ?start < 18)
 	}
 
+<---------------18----------------->
+SELECT *
+	WHERE {
+		?subject trip:hasCategory trip:Entertainment.
+		?subject trip:startTime ?start.
+		?subject trip:price ?price.
+		filter(?start > 5 && ?start < 18).
+		filter(?price < 100)
+}
+	
 <---------------19----------------->
 SELECT *
 	WHERE {
