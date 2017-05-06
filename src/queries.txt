@@ -32,16 +32,12 @@ SELECT ?activity ?rate
 	}		
 ORDER BY DESC(?rate)
 
-
-<---------------05----------------->
-SELECT ?activity ?rank
-WHERE { ?activity trip:hasCategory trip:Historical .
-	?review trip:rated ?activity.
-	?review trip:rate ?rank }
+=
 
 <---------------06----------------->
 SELECT ?activity ?start ?end
-WHERE { ?activity trip:hasCategory trip:Historical .
+WHERE { 
+	?activity trip:hasCategory trip:Historical .
 	?activity trip:startTime ?start .
 	?activity trip:endTime ?end.
 	FILTER(?start < 17) .
@@ -51,7 +47,9 @@ WHERE { ?activity trip:hasCategory trip:Historical .
 SELECT *
 	WHERE { 
 		?subject trip:hasCategory trip:Historical.
-		?subject trip:endTime ?end.
+		?activity trip:startTime ?start .
+		?activity trip:endTime ?end.
+		FILTER(?start < 24) .
 		filter(?end > 18)
 	}
 
@@ -65,14 +63,21 @@ WHERE {
 <---------------09----------------->
 SELECT * 
 	WHERE {
-		?activity trip:Type trip:Historical.
-	}
-	ORDER BY Desc(price)
+		?activity trip:hasCategory trip:Historical.
+		?activity trip:price ?price.
+	}	
+	ORDER BY DESC(?price)
 
 <---------------10----------------->
 SELECT ?activity ?city
-WHERE { ?activity trip:hasCategory trip:Sport .
-	?city trip:includes ?activity }
+WHERE { 
+	?activity rdf:type trip:Activity.
+	?activity trip:hasCategory trip:Sport.
+	?city rdf:type trip:City.
+	?city trip:includes ?activity.
+	?city trip:name ?name.
+	FILTER regex(?name,  "Luxor", "i"). 
+	}
 
 <---------------11----------------->
 SELECT ?activity ?price
@@ -83,6 +88,14 @@ WHERE { { ?activity trip:hasCategory trip:Sport }
 }
 
 <---------------12---------------->
+SELECT ?subject
+	WHERE { 
+		?subject trip:hasCategory trip:Sport.
+		?subject trip:name ?name.
+		FILTER regex(?name, "swimming", "i"). 
+	}
+
+<---------------13---------------->
 SELECT ?subject
 	WHERE { 
 		?subject trip:hasCategory trip:Sport.

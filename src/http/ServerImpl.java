@@ -14,6 +14,14 @@ public class ServerImpl {
 		server.createContext("/query3", HttpHandlerImpl.queryThree);
 		server.createContext("/query4", HttpHandlerImpl.queryFour);
 		server.createContext("/query5", HttpHandlerImpl.queryFive);
+		server.createContext("/query6", HttpHandlerImpl.querySix);
+		server.createContext("/query7", HttpHandlerImpl.querySeven);
+		server.createContext("/query8", HttpHandlerImpl.queryEight);
+		server.createContext("/query9", HttpHandlerImpl.queryNine);
+		server.createContext("/query10", HttpHandlerImpl.queryTen);
+		server.createContext("/query12", HttpHandlerImpl.queryTwelve);
+		server.createContext("/query13", HttpHandlerImpl.queryThirteen);
+		
 		server.createContext("/query16", HttpHandlerImpl.querySixteen);
 		server.createContext("/query17", HttpHandlerImpl.querySeventeen);
 		

@@ -88,6 +88,107 @@ public class HttpHandlerImpl {
 		}
 	};
 	
+	public static final HttpHandler querySix = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().querySix(map.get("category"));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler querySeven = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().querySeven(map.get("category"));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryEight = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().queryEight(map.get("category"));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryNine = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().queryNine(map.get("category"));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryTen = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance()
+					.queryTen(map.get("category"), map.get("city"));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryTwelve = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null || map.get("match") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance()
+					.queryTwelve(map.get("category"), map.get("match"));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static final HttpHandler queryThirteen = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null || map.get("maxPrice") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance()
+					.queryThirteen(map.get("category"), Integer.parseInt(map.get("maxPrice")));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
 	public static HttpHandler querySixteen = new HttpHandler() {
 		@Override
 		public void handle(HttpExchange t) throws IOException {
