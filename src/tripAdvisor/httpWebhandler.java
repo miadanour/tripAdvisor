@@ -19,9 +19,24 @@ public class httpWebhandler implements HttpHandler {
 		os.close();
 	}
 
+	@SuppressWarnings("restriction")
 	public static void main(String[] args) throws Exception {
 		HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
-		server.createContext("/home", new httpWebhandler());
+		server.createContext("/home", new httpWebhandler(){
+			@Override
+			public void handle(HttpExchange t) throws IOException {
+				String response = "This is the response";
+				
+				String r = t.getRequestURI().getQuery();
+				t.sendResponseHeaders(200, r.length());
+				
+				
+				OutputStream os = t.getResponseBody();
+				os.write(r.getBytes());
+				os.close();
+				
+			}
+		});
 		server.start();
 	}
 }
