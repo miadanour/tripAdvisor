@@ -1,0 +1,3248 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/tripAdvisor/Trip#"
+     xml:base="http://www.semanticweb.org/tripAdvisor/Trip"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/tripAdvisor/Trip"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#choseactivity -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#choseactivity">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Trip"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#chosenTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#chosenTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Trip"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#timeRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#hasCategory">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#hasTimeRange -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#hasTimeRange">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#timeRange"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#includes -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#includes">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#interestedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#interestedIn">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#rates -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#rates">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Review"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#bestSeason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#bestSeason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#duration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#duration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#endTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#endTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#timeRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#gender -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#gender">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#location -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#location">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#name">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#price -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#price">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#rate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#rate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Review"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#startTime -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#startTime">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#timeRange"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#type -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#type">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Activity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Category -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#City -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Interest -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Review -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Review"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Trip -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Trip"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#User -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#timeRange -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#timeRange"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+     <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aswan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#AlwaysOpen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#timeRange"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</endTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Ardena_Group_Shop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Esquire_Restaurant_and_Bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Food">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FootballAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Historical">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Hot_Air_Balloon_Flight_Over_Luxor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Sport">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Category"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Sunflower_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aswan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtAswanSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtAswanSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtAswanSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#HandballAtAswanSportsClub"/>
+        <bestSeason>Winter</bestSeason>
+        <name>Aswan</name>
+        <includes></includes>
+    </owl:NamedIndividual>
+    
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Luxor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Luxor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Abo_Sinble_Factory"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Museum"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Aboudi_Coffee_Break"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Aboudy_Book_Shop"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Abu_El-Hagag_Mosque"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Aegyptus_Papyrus_Galleries"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Africa_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Aisha_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Al-Qurn"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Al_Hareef_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Al_Sahaby_Lane_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Aladdin"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Aldaly_Gallery"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Ardena_Group_Shop"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Ask_The_Egyptian"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Ata_Bazr"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Avenue_of_Sphinxes"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Bait_El_Ainy_Jewelery_Shop"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Banana_Island"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Bayan_Book_Store"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Blue_Sky_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BoxingAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Cafe_Latte"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#CanoeingAtLuxorRowingClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Caravanserai"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Caravanserai_Crafts"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Colossi_of_Memnon"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Corniche"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Corniche_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Cotton_Home"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Crocodile_Bezaar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Deans_Bistro"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Dendera_Temple"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#El-Assasif_Tombs"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#El-Karnak_Park"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#ElModhesh_Gift_Shop"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#El_Hussein_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#El_Zaeem_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Esquire_Restaurant_and_Bar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Fair_Trade_Center_Luxor_Outlet"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Farouk_Gallery"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Fayrouz"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Felucca_Day_Cruise"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Felucca_Ride_on_the_Nile_River"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Garagos_Pottery"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Golden_Palace_Bar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtElGeziraGolf"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtMenaHouse"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtPyramidsGolf"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtRoyalValley"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Great_Hypostyle_Hall"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Habiba_Gallery"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Habiba_Hand_Weaving"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Hagaza_Wood_Art"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Hareem_Al_Sultan_Store"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Hot_Air_Balloon_Flight_Over_Luxor"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Howard_Carter_House"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Isis_Temple"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Jamboree"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Jana"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Jewel_of_the_Nile"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Kam_Thai_Takeaway"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#KarateAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Karnak_Open_Air_Museum"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Karnak_Sound_and_Light_Show"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#KayakingAtLuxorRowingClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Kom_Ombo_Temple"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#KungFuAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#La_Fleur"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Lady_Style_Center"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Leave_it_to_God_Spice_Vendor"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Book_Store"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Desert_Day_Tour_on_Quad_Bike"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Flee_Market"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Nubian_Shop_Bazar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Maharty_Kids"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Marsam"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Maxime_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Medamud_Temple"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Misr_Public_Library_Luxor"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Moon_Valley_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Mortuary_Temple_of_Amenhotep_III"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Mummification_Museum"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Nayara_Spa"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Nefertari_Papyrus_Institute"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Nero_Caffe"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Nobi_Stables"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Oasis_Cafe"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Oasis_Palace"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Oum_Hashim_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Pharaohs_Stable"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Pizza_Roma_it"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Precinct_of_Amun-Re"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Quick_Pizza_Luxor"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Qurna_Village"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Ramesseum"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Ramesseum_Rest_House"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Refaet_Gallery"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Restaurant_Mohammed"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sacred_lake"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SailingAtLuxorRowingClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sandouk_Shop"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Secret_Garden_Cafe"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Silk_Road"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Snobs"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sonesta_St._George_Hotel_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Spirit_Music_Center"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sunflower_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Suraya_Spa"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtLuxorSwimmingAcademy"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Television_Street_Shopping_Center"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tempel_Thutmose_III"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Amun"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Hatshepsut_at_Deir_el_Bahari"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Horus_at_Edfu"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Karnak"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Luxor"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Medinat_Habu"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Montu"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Mut"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Seti_I"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Thoth_at_Qasr_el-Aguz"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temples_of_Abydos"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#TennisAtAswanSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#The_Kings_Head_Pub_and_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#The_Necropolis_of_El-Khokha"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#The_lantern_Room"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#The_little_Bazar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Theban_Necropolis"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Amonherkhopeshef"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ay"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Merenptah"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Queen_Nefertari"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ramses_III"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ramses_VI"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Sennedjem"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Shuroy"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tutankhamon"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Kings"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Nobles"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Queens"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Wembley_Play_Station"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#WrestlingAtLuxorSportsClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Zigolini_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#1886_Restaurant"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#3-Hour_Private_Felucca_Ride"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#4-night_5-star_Nile_Cruise_from_Luxor_to_Aswan"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#A_Taste_of_India_&amp;_Arabia_International_Restaurant_Plus_Bar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Alladin&apos;s_Cave_Gift_Shop"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Gerda&apos;s_Garden"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#L&apos;Oasis"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#McDonald&apos;s_Luxor"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Murphy&apos;s_Irish_Pub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Parfum_D&apos;eternite"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sofra_Restaurant&amp;Cafe"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SunRise_Restaurant_&amp;_Bar"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Khnum,_Esna"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_King_Tutankhamun_(Tut)"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Artisans_(Deir_el-Medina)"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Wenkie&apos;s_German_Ice_Cream_&amp;Iced_Coffee_Parlour"/>
+        <bestSeason>Winter</bestSeason>
+        <name>Luxor</name>
+    </owl:NamedIndividual>
+    
+
+
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Hurghada">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SkiingAtSonJou"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#DivingAtBlueWaterDiveResort"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingAtSonJou"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#DivingAtSonJou"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#FishingAtSonJou"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingAtBlueWaterDiveResort"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#FishingAtBlueWaterDiveResort"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SnoreklingAtVoodooDivers"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SkiingAtVoodooDivers"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#DivingAtVoodooDivers"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#FishingAtVoodooDivers"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingSinaiExcuration"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#DivingSinaiExcuration"/>
+        <includes rdf:resrouce="http://www.semanticweb.org/tripAdvisor/Trip#SkiingSinaiExcuration"/>
+        <includes rdf:reousrce="http://www.semanticweb.org/tripAdvisor/Trip#FishingSinaiExcuration"/>
+        <bestSeason>Summer</bestSeason>
+        <name>Hurghada</name>
+    </owl:NamedIndividual>
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Cairo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Cairo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BadmintonAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BadmintonAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BasketBallAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#FencingAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#FencingAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#HandBallAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#HandBallAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SwimingAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#TableTennisAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#TableTennisAtZamalekClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#TennisAtAhlyClub"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#TennisAtZamalekClub"/>
+        <bestSeason>Winter</bestSeason>
+        <name>Cairo</name>
+    </owl:NamedIndividual>
+    
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Alexandria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Alexandria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#City"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Minouche"/>
+        <includes rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Samakmak"/>
+        <bestSeason>Winter</bestSeason>
+        <name>Alexandria</name>
+    </owl:NamedIndividual>
+
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Abo_Sinble_Factory -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Abo_Sinble_Factory">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17.0</endTime>
+        <location>West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aboudi_Coffee_Break -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aboudi_Coffee_Break">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Luxor Temple Street | In front of Luxor Temple Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aboudy_Book_Shop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aboudy_Book_Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Off Cornish close to passport office</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Abu_El-Hagag_Mosque -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Abu_El-Hagag_Mosque">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <location>Mabad Al Oksor, Luxor City, Luxor, Luxor Governorate</location>
+        <name>Abu El-Hagag Mosque</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aegyptus_Papyrus_Galleries -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aegyptus_Papyrus_Galleries">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Modiriet El Amn Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Africa_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Africa_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Main street West Bank | Gezira, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aisha_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aisha_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El Rawda El Sharifa St | Front of Sonesta Hotel</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Al-Qurn -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Al-Qurn">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <location>western bank of the Nile, opposite Thebes</location>
+        <name>Al-Qurn</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Al_Hareef_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Al_Hareef_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El Mansheya Street | Directly across from Luxor Train Station, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Al_Sahaby_Lane_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Al_Sahaby_Lane_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.0</endTime>
+        <location>Al-Sahaby St | Via Luxor Temple St, Luxor 85951</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">199</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aladdin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aladdin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>West Bank, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Aldaly_Gallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Aldaly_Gallery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Khaled Ebn el Waleed Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#AlwaysOpen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Ardena_Group_Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El Morour Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Ask_The_Egyptian -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Ask_The_Egyptian">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Khaled Ibn el Waleed Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+   
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Ata_Bazr -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Ata_Bazr">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>El-Karnak Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Avenue_of_Sphinxes -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Avenue_of_Sphinxes">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Avenue of Sphinxes</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BadmintonAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BadmintonAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Badminton</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BadmintonAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BadmintonAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Badminton</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</endTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Bait_El_Ainy_Jewelery_Shop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Bait_El_Ainy_Jewelery_Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>El Gawazat Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Banana_Island -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Banana_Island">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>Luxor Left Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BasketBallAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BasketBallAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Basket ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Basket ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtAswanSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtAswanSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
+        <name>Basket ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BasketballAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>BasketBall</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Bayan_Book_Store -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Bayan_Book_Store">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Zamzam Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Blue_Sky_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Blue_Sky_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El Ramla | West Bank, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#BoxingAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#BoxingAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>Boxing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Cafe_Latte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Cafe_Latte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Luxor Temple Street | Opposite Luxor temple, next to McDonald&apos;s, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#CanoeingAtLuxorRowingClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#CanoeingAtLuxorRowingClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Rowing Club</location>
+        <name>Canoe</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Caravanserai -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Caravanserai">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</endTime>
+        <name>Caravanserai</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Caravanserai_Crafts -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Caravanserai_Crafts">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Madinat Habou West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Colossi_of_Memnon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Colossi_of_Memnon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Colossi of Memnon</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Corniche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Corniche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Corniche</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Corniche_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Corniche_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Cornish el Nile st, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Cotton_Home -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Cotton_Home">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nile Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Crocodile_Bezaar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Crocodile_Bezaar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</endTime>
+        <name>Crocodile Bezaar</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Deans_Bistro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Deans_Bistro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El Rawda El Sherifa Street, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Dendera_Temple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Dendera_Temple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</endTime>
+        <name>Dendera Temple</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#DivingAtBlueWaterDiveResort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#DivingAtBlueWaterDiveResort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Blue Water Dive Resort,Hurghada</location>
+        <name>Diving</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#DivingAtSonJou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#DivingAtSonJou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Son Dijou ,Hurghada 84512.</location>
+        <name>Diving</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#DivingAtVoodooDivers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#DivingAtVoodooDivers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
+        <location>VooDoo Divers, Bella Vista Resort, Hurghada</location>
+        <name>Diving</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#DivingSinaiExcuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#DivingSinaiExcuration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Sinai Excursions,Hurghada</location>
+        <name>Diving</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#El-Assasif_Tombs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#El-Assasif_Tombs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>El-Assasif Tombs</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#El-Karnak_Park -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#El-Karnak_Park">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>Courniche El Nile Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#ElModhesh_Gift_Shop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ElModhesh_Gift_Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</endTime>
+        <location>El Madeina El Monawara Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#El_Hussein_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#El_Hussein_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.5</endTime>
+        <location>Hilton St. | New Karnak, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#El_Zaeem_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#El_Zaeem_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Youssef Hassan St. in Front Of Lotus mall, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Entertainment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Esquire_Restaurant_and_Bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Ali Ebn Taleb Street, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Fair_Trade_Center_Luxor_Outlet -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Fair_Trade_Center_Luxor_Outlet">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Al-Karnak Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Farouk_Gallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Farouk_Gallery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Fayrouz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Fayrouz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El-Gezeera Village, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Felucca_Day_Cruise -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Felucca_Day_Cruise">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</endTime>
+        <location>Central, East Bank, West Bank</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Felucca_Ride_on_the_Nile_River -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Felucca_Ride_on_the_Nile_River">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>hotels in luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">270</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.5</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FencingAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FencingAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Fencing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FencingAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FencingAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Fencing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FishingAtBlueWaterDiveResort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FishingAtBlueWaterDiveResort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Blue Water Dive Resort,Hurghada</location>
+        <name>Fishing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FishingAtSonJou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FishingAtSonJou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Son Dijou ,Hurghada 84512.</location>
+        <name>Fishing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FishingAtVoodooDivers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FishingAtVoodooDivers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
+        <location>VooDoo Divers, Bella Vista Resort, Hurghada</location>
+        <name>Fishing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FishingSinaiExcuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FishingSinaiExcuration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Sinai Excursions,Hurghada</location>
+        <name>Fishing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Food -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Foot ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FootballAtAswanSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtAswanSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
+        <name>Football</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FootballAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>Foot ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#FootballAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#FootballAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Foot ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Garagos_Pottery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Garagos_Pottery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Garagos Village</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Golden_Palace_Bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Golden_Palace_Bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Television Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#GolfAtElGeziraGolf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtElGeziraGolf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>El Gezira Golf, Giza, Cairo</location>
+        <name>Golf</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#GolfAtMenaHouse -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtMenaHouse">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Mena House, Giza, Cairo</location>
+        <name>Golf</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#GolfAtPyramidsGolf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtPyramidsGolf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Pyramids Golf, Giza, Cairo</location>
+        <name>Golf</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#GolfAtRoyalValley -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#GolfAtRoyalValley">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
+        <location>Royal Valley, Luxor.</location>
+        <name>Golf</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Great_Hypostyle_Hall -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Great_Hypostyle_Hall">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</endTime>
+        <name>Great Hypostyle Hall</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Habiba_Gallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Habiba_Gallery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Sidi Mahmoud Street | Opposite exit gate of Luxor Temple</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Habiba_Hand_Weaving -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Habiba_Hand_Weaving">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Memnon Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Hagaza_Wood_Art -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Hagaza_Wood_Art">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Hagaza</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#HandBallAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#HandBallAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Hand Ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#HandBallAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#HandBallAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Hand Ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#HandballAtAswanSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#HandballAtAswanSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
+        <name>Hand ball</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Hareem_Al_Sultan_Store -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Hareem_Al_Sultan_Store">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.0</endTime>
+        <location>El Tayeb Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Historical -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Hot_Air_Balloon_Flight_Over_Luxor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</endTime>
+        <location rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Centrally located Luxor hotels or Luxor Port</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#double">3500.0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Howard_Carter_House -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Howard_Carter_House">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</endTime>
+        <name>Howard Carter House</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Hurghada -->
+
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Isis_Temple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Isis_Temple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <name>Isis Temple</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Jamboree -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Jamboree">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Market Street | Right in the souk, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Jana -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Jana">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Beside Hilton Hotel | Karnak, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Jewel_of_the_Nile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Jewel_of_the_Nile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El Roada El Sharyfa | Off Medina Street, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">95</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Kam_Thai_Takeaway -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Kam_Thai_Takeaway">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21.0</endTime>
+        <location>21 El Gwazat Street, Luxor 83951</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">108</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#KarateAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#KarateAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>Karate</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Karnak_Open_Air_Museum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Karnak_Open_Air_Museum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</endTime>
+        <name>Karnak Open Air Museum</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Karnak_Sound_and_Light_Show -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Karnak_Sound_and_Light_Show">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Luxor Hotels, Luxor Port</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">690</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#KayakingAtLuxorRowingClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#KayakingAtLuxorRowingClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Rowing Club</location>
+        <name>Kayak</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Kom_Ombo_Temple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Kom_Ombo_Temple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</endTime>
+        <name>Kom Ombo Temple</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#KungFuAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#KungFuAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>Kung Fu</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#La_Fleur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#La_Fleur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Kings Island, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">630</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Lady_Style_Center -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Lady_Style_Center">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</endTime>
+        <location>Eltakween Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.5</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Leave_it_to_God_Spice_Vendor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Leave_it_to_God_Spice_Vendor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Zoqaq Ghazal Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Book_Store -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Book_Store">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.0</endTime>
+        <location>Television Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">6.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Desert_Day_Tour_on_Quad_Bike -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Desert_Day_Tour_on_Quad_Bike">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">5.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</endTime>
+        <location>Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1350</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Flee_Market -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Flee_Market">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Luxor Center</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Museum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Museum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</endTime>
+        <name>Luxor Museum</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Nubian_Shop_Bazar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Luxor_Nubian_Shop_Bazar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Khaled Ebn El Waleed Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Maharty_Kids -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Maharty_Kids">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17.0</endTime>
+        <location>El Mozdalefa Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Marsam -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Marsam">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Maxime_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Maxime_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Khaled Ibn Alwaleed Street, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">290</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Medamud_Temple -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Medamud_Temple">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Medamud Temple</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Minouche -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Minouche">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <location>242 El Guish Rd. Qesm Sidi Gaber Governorate, Alexandria Governorate</location>
+        <name>Minouche</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Misr_Public_Library_Luxor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Misr_Public_Library_Luxor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>El-Karnak Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Moon_Valley_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Moon_Valley_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Memnon Street | West Bank El Korrna, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Mortuary_Temple_of_Amenhotep_III -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Mortuary_Temple_of_Amenhotep_III">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</endTime>
+        <name>Mortuary Temple of Amenhotep III</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Mummification_Museum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Mummification_Museum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23</endTime>
+        <name>Mummification Museum</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Nayara_Spa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Nayara_Spa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>New Karnak | Hilton Luxor Resort &amp; Spa</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Nefertari_Papyrus_Institute -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Nefertari_Papyrus_Institute">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Memnon Street West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Nero_Caffe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Nero_Caffe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</endTime>
+        <location>El Sharifa Street, Luxor, Egypt</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Nobi_Stables -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Nobi_Stables">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>Luxor West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Oasis_Cafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Oasis_Cafe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>St Joseph Street, Luxor Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">150</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Oasis_Palace -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Oasis_Palace">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Dr Labib Habashy Street, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">155</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Oum_Hashim_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Oum_Hashim_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Youssef Hassan St., Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Pharaohs_Stable -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Pharaohs_Stable">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>Across Amon Hotel West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Pizza_Roma_it -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Pizza_Roma_it">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>El-Mahdi Street on the corner of St. Joseph Hotel | Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">126</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Precinct_of_Amun-Re -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Precinct_of_Amun-Re">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</endTime>
+        <name rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</name>
+        <name>Precinct of Amun-Re</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Quick_Pizza_Luxor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Quick_Pizza_Luxor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</endTime>
+        <location>Television Street, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Qurna_Village -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Qurna_Village">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Qurna Village</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Ramesseum -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Ramesseum">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Ramesseum</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Ramesseum_Rest_House -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Ramesseum_Rest_House">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Mortuary Temple of Rameses II | West Bank, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Refaet_Gallery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Refaet_Gallery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Asayta Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Restaurant_Mohammed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Restaurant_Mohammed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Sacred_lake -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Sacred_lake">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Sacred lake</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SailingAtLuxorRowingClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SailingAtLuxorRowingClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Rowing Club</location>
+        <name>Sailing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Samakmak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Samakmak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</endTime>
+        <location>As Sayalah Gharb, Qesm Al Gomrok, Alexandria Governorate</location>
+        <name>Samakmak</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Sandouk_Shop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Sandouk_Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>West Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Secret_Garden_Cafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Secret_Garden_Cafe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">18.0</endTime>
+        <location>Radwa Sherifa St | opposite Sonesta Hotel, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">115</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Silk_Road -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Silk_Road">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Hilton Hotel, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SkiingAtSonJou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SkiingAtSonJou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Son Dijou ,Hurghada 84512.</location>
+        <name>Skiing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SkiingAtVoodooDivers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SkiingAtVoodooDivers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
+        <location>VooDoo Divers, Bella Vista Resort, Hurghada</location>
+        <name>Skiing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SkiingSinaiExcuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SkiingSinaiExcuration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Sinai Excursions,Hurghada</location>
+        <name>Skiing</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Snobs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Snobs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.0</endTime>
+        <location>El Rhoda El Sherifa St | El Rhoda El Sherifa St</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SnoreklingAtVoodooDivers -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SnoreklingAtVoodooDivers">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
+        <location>VooDoo Divers, Bella Vista Resort, Hurghada</location>
+        <name>Snorkeling</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingAtBlueWaterDiveResort -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingAtBlueWaterDiveResort">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Blue Water Dive Resort,Hurghada</location>
+        <name>Snorkling</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingAtSonJou -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingAtSonJou">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Son Dijou ,Hurghada 84512.</location>
+        <name>Snorkeling</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingSinaiExcuration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SnorkelingSinaiExcuration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Sinai Excursions,Hurghada</location>
+        <name>Snorkeling</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Sonesta_St._George_Hotel_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Sonesta_St._George_Hotel_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Cornesh El Nile Street, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Spirit_Music_Center -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Spirit_Music_Center">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Shark El Seka Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Sport -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Sunflower_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.0</endTime>
+        <location>West Bank, Luxor 85951</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">225</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Suraya_Spa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Suraya_Spa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</endTime>
+        <location>Khaled Ben El Walid Street | Hotel Steigenberger Nile Palace</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SwimingAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SwimingAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Swimming</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Swimming</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtAswanSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtAswanSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
+        <name>Swimming</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>Swimming</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtLuxorSwimmingAcademy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SwimmingAtLuxorSwimmingAcademy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Luxor Swimming Academy, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Swimming</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#TableTennisAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TableTennisAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Table Tennis</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#TableTennisAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TableTennisAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Table Tennis</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Television_Street_Shopping_Center -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Television_Street_Shopping_Center">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Makka Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tempel_Thutmose_III -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tempel_Thutmose_III">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <name>Tempel Thutmose III</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Amun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Amun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</endTime>
+        <name>Temple of Amun</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Hatshepsut_at_Deir_el_Bahari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Hatshepsut_at_Deir_el_Bahari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Temple of Hatshepsut at Deir el Bahari</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Horus_at_Edfu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Horus_at_Edfu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</endTime>
+        <name>Temple of Horus at Edfu</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Karnak -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Karnak">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Temple of Karnak</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">80</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Luxor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Luxor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</endTime>
+        <name>Temple of Luxor</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Medinat_Habu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Medinat_Habu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Temple of Medinat Habu</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Montu -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Montu">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Temple of Montu</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Mut -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Mut">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Temple of Mut</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Seti_I -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Seti_I">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Temple of Seti I</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Thoth_at_Qasr_el-Aguz -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Thoth_at_Qasr_el-Aguz">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Temple of Thoth at Qasr el-Aguz</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temples_of_Abydos -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temples_of_Abydos">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">16</endTime>
+        <name>Temples of Abydos</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#TennisAtAhlyClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TennisAtAhlyClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <name>Tennis</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#TennisAtAswanSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TennisAtAswanSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
+        <name>Tennis</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#TennisAtZamalekClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TennisAtZamalekClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <name>Tennis</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#The_Kings_Head_Pub_and_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#The_Kings_Head_Pub_and_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Khaled Ben El Waleed Street | Opposite The Lotus Hotel</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">343</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#The_Necropolis_of_El-Khokha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#The_Necropolis_of_El-Khokha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">22</endTime>
+        <name>The Necropolis of El-Khokha</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#The_lantern_Room -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#The_lantern_Room">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.5</endTime>
+        <location>Al Roda al Sharifa Street | Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">17.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#The_little_Bazar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#The_little_Bazar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>West Bank Ramala Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">9.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Theban_Necropolis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Theban_Necropolis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">21</endTime>
+        <name>Theban Necropolis</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">30</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Amonherkhopeshef -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Amonherkhopeshef">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Tomb of Amonherkhopeshef</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ay -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ay">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Tomb of Ay</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">25</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Merenptah -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Merenptah">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</duration>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Tomb of Merenptah</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Queen_Nefertari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Queen_Nefertari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</endTime>
+        <name>Tomb of Queen Nefertari</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ramses_III -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ramses_III">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <name>Tomb of Ramses III</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</startTime>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ramses_VI -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Ramses_VI">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</endTime>
+        <name>Tomb of Ramses VI</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Sennedjem -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Sennedjem">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Tomb of Sennedjem</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Shuroy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_Shuroy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</endTime>
+        <name>Tomb of Shuroy</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tutankhamon -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tutankhamon">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Al-Gezira | West Bank, Luxor,</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Kings -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Kings">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <name>Valley of the Kings</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Nobles -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Nobles">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">18</endTime>
+        <name>Valley of the Nobles</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Queens -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Queens">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">17</endTime>
+        <name>Valley of the Queens</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Wembley_Play_Station -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Wembley_Play_Station">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">4.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</endTime>
+        <location>Television Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#WrestlingAtLuxorSportsClub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#WrestlingAtLuxorSportsClub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Sports Club</location>
+        <name>Wrestling</name>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Zigolini_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Zigolini_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Awameya Road, Kings Island Luxor, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#1886_Restaurant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#1886_Restaurant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Old Winter Palace Hotel, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">310</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#3-Hour_Private_Felucca_Ride -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#3-Hour_Private_Felucca_Ride">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <location>Luxor Hotels</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#4-night_5-star_Nile_Cruise_from_Luxor_to_Aswan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#4-night_5-star_Nile_Cruise_from_Luxor_to_Aswan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">96.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</endTime>
+        <location>Luxor Airport, Luxor Train Station, Luxor Hotels</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5400</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#A_Taste_of_India_&amp;_Arabia_International_Restaurant_Plus_Bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#A_Taste_of_India_&amp;_Arabia_International_Restaurant_Plus_Bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.0</endTime>
+        <location>St Joseph Street, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">200</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Alladin&apos;s_Cave_Gift_Shop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Alladin&apos;s_Cave_Gift_Shop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">2.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Khaled Ben Walid Street East Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Gerda&apos;s_Garden -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Gerda&apos;s_Garden">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Elkarnak | Opposite Hilton Hotel, Luxor</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">110</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#L&apos;Oasis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#L&apos;Oasis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Sofitel Winter Palace - Corniche el Nile street, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#McDonald&apos;s_Luxor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#McDonald&apos;s_Luxor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</endTime>
+        <location>Temple Road, Luxor</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Murphy&apos;s_Irish_Pub -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Murphy&apos;s_Irish_Pub">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">3.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <location>Sharia al-Gawazat East Bank</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Parfum_D&apos;eternite -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Parfum_D&apos;eternite">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>Ali Ibn Abou Taleb Street</location>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Sofra_Restaurant&amp;Cafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Sofra_Restaurant&amp;Cafe">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">22.0</endTime>
+        <location>90 Mohamed Farid Street | Al Manshiya</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">145</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#SunRise_Restaurant_&amp;_Bar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SunRise_Restaurant_&amp;_Bar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">23.5</endTime>
+        <location>Khaled Ibn Al Walid St., First Floor | Front of Sonesta Hotel, Luxor, Egypt</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">181</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Khnum,_Esna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Temple_of_Khnum,_Esna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">19</endTime>
+        <name>Temple of Khnum</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_King_Tutankhamun_(Tut) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Tomb_of_King_Tutankhamun_(Tut)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">24.0</endTime>
+        <location>East Valley of the Kings</location>
+        <name>Tomb of King Tutankhamun (Tut)</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">0.0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Artisans_(Deir_el-Medina) -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Valley_of_the_Artisans_(Deir_el-Medina)">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">24</endTime>
+        <location>Deir el Medina</location>
+        <name>Valley of the Artisans (Deir el-Medina)</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</startTime>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/tripAdvisor/Trip#Wenkie&apos;s_German_Ice_Cream_&amp;Iced_Coffee_Parlour -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#Wenkie&apos;s_German_Ice_Cream_&amp;Iced_Coffee_Parlour">
+        <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
+        <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+        <duration rdf:datatype="http://www.w3.org/2001/XMLSchema#float">1.0</duration>
+        <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">21.0</endTime>
+        <location>El Gawazat Street | Opposite the Nile Palace at the Far Left End of the Street, Luxor, Egypt</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">36</price>
+        <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</startTime>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
