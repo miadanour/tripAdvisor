@@ -99,7 +99,9 @@ WHERE { ?activity trip:hasCategory trip:Entertainment }
 
 <---------------16---------------->
 SELECT ?me ?activity ?interest
-WHERE { ?me trip:interestedIn ?interest .
+WHERE {
+	?me rdf:type trip:Person 
+	?me trip:interestedIn ?interest .
 	?interest trip:type ?type .
 	?activity trip:hasCategory trip:Entertainment . 
 	FILTER(REGEX(str(?activity), str(?interest)))}
@@ -115,7 +117,7 @@ SELECT *
 <---------------19----------------->
 SELECT *
 	WHERE {
-		?activity trip:Type trip:Entertainment
+		?activity rdf:type trip:Entertainment
 		?activity trip:Duration trip:?a
 		?subject luxor:startTime ?start.
 		filter(?start > 5 && ?start < 18)
