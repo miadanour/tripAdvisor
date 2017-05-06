@@ -1,0 +1,108 @@
+body {
+  margin: 0!important;
+}
+
+nav {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 10000;
+	width: 100vw;
+	display: flex;
+	background: rgba(221, 230, 222, 0.3);
+	height: 60px;
+	justify-content: center;
+}
+nav ul{
+	list-style: none;
+	width: inherit;
+}
+nav li{
+
+	width: 25vw;
+	display: inline-block;
+}
+
+nav li a {
+	justify-content: center;
+	font-family: "Raleway";
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+nav:hover {
+	background-color: #aaaa;
+	opacity: 1;
+}
+
+.welcome-page {
+    width: 100vw;
+    height: 35vw;
+    background-image: url(luxor-wallpaper.jpg);
+    background-size: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pop-activities{
+	width: 100vw;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.card{ 
+	justify-content: center;
+	margin: 10px;
+	width: 25vw;
+	height: 200px;
+	background: #e4e4e4;
+}
+
+.card img {
+	position: relative;
+	left: 0;
+	width: 100%;	
+}
+
+.searchbar{
+
+}
+
+.searchbar li {
+	display: inline-block;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Regular.ttf);
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Black.ttf);
+    font-weight: 800;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Thin.ttf);
+    font-weight: 100;
+}
+
+@font-face {
+    font-family: Raleway;
+    src: url(Raleway-Light.ttf);
+    font-weight: 300;
+}
