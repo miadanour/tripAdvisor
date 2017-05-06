@@ -13,6 +13,7 @@ public class ServerImpl {
 
 		server.createContext("/query1", HttpHandlerImpl.queryOne);
 		server.createContext("/query2", HttpHandlerImpl.queryTwo);
+		server.createContext("/query3", HttpHandlerImpl.queryThree);
 		
 		server.start();
 	}

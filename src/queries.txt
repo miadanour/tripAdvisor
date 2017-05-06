@@ -11,6 +11,7 @@ WHERE { ?city trip:bestSeason ?season }
 <---------------02----------------->
 SELECT * 
 	WHERE { 
+		?subject rdf:type trip:City.
 		?subject trip:hasCategory ?x 
 	}
 
