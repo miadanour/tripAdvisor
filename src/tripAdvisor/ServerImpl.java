@@ -7,7 +7,7 @@ import com.sun.net.httpserver.HttpServer;
 import http.HttpHandlerImpl;
 
 @SuppressWarnings("restriction")
-public class httpWebhandler {
+public class ServerImpl {
 	public static void main(String[] args) throws Exception {
 		HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
 
