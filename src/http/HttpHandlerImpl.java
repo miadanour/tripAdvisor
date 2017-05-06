@@ -1,35 +1,67 @@
 package http;
 
-
-
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.Map;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
 import queries.OntologyLink;
 
+import utils.QueryParser;
+
+
 @SuppressWarnings("restriction")
 public class HttpHandlerImpl {
-	public static HttpHandler queryOne = new HttpHandler() {
+	
+	public static final HttpHandler queryOne = new HttpHandler() {
 		@Override
-		public void handle(HttpExchange t) {
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("season") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().bestSeason(map.get("season"));
 			
+			outputResult(t, 200, result);
 		}
 	};
 	
-	public static HttpHandler queryTwo = new HttpHandler() {
+	public static final HttpHandler queryTwo = new HttpHandler() {
 		@Override
-		public void handle(HttpExchange t) {
-			
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().hasCategory(map.get("category"));
+
+			outputResult(t, 200, result);
+		}
+	};
+	
+
+	public static final HttpHandler queryThree = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().includesActivityWithCategory(map.get("category"));
+
+			outputResult(t, 200, result);
 		}
 	};
 	
 	public static HttpHandler querySixteen = new HttpHandler() {
 		@Override
-		public void handle(HttpExchange t) {
-			String r = OntologyLink.getInstance().querySixteen(); 
+		public void handle(HttpExchange t) throws IOException {
+			String result = OntologyLink.getInstance().querySixteen("harry"); 
 			
 			t.sendResponseHeaders(200, result.length());
 			OutputStream os = t.getResponseBody();
@@ -38,7 +70,9 @@ public class HttpHandlerImpl {
 		}
 	};
 	
-	private static void outputResult(HttpExchange t, int status, String result) throws IOException {
+
+	
+	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());
 		OutputStream os = t.getResponseBody();
 		os.write(result.getBytes());

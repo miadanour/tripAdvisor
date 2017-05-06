@@ -17,6 +17,7 @@ public class QueryParser {
 	}
 	
 	public Map<String, String> parse(String query) {
+		if(query == null)	return null;
 		Map<String, String> result = new HashMap<>();
 		
 		String[] queries = query.split("&");
