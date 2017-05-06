@@ -142,7 +142,7 @@ public class HttpHandlerImpl {
 		@Override
 		public void handle(HttpExchange t) throws IOException {
 			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
-			if(map == null || map.get("category") == null || map.get("category") == null) {
+			if(map == null || map.get("category") == null || map.get("city") == null) {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}

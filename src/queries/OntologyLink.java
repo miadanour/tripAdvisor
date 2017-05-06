@@ -43,7 +43,10 @@ public class OntologyLink {
 	}
 
 	public String queryTwo(String cat) {
-		String query = prefix + "SELECT ?subject" + "\n" + "WHERE {?subject trip:hasCategory trip:" + cat + " }";
+		String query = prefix + "SELECT ?subject" + "\n" + "WHERE {"
+				+ "?subject rdf:type trip:City."
+				+ "?subject trip:hasCategory trip:" + cat
+				+ "}";
 		return executeQuery(query);
 	}
 
@@ -214,6 +217,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().querySix("Food", 100));
+		System.out.println(OntologyLink.getInstance().queryThree("Food"));
 	}
 }
