@@ -74,6 +74,82 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 	
+	public String querySix(String cat) {
+		String query = prefix + "SELECT ?activity ?start ?end \n "
+				+ "WHERE { "
+				+ "?activity trip:hasCategory trip:"+cat+"."
+				+ "?activity trip:startTime ?start."
+				+ "?activity trip:endTime ?end."
+				+ "FILTER(?start < 17) ."
+				+ "FILTER(?end > 6) }";
+					
+		return executeQuery(query);
+	}
+	
+	public String querySeven(String cat) {
+		String query = prefix + "SELECT ?activity ?start ?end \n "
+				+ "WHERE { "
+				+ "?activity trip:hasCategory trip:"+cat+"."
+				+ "?activity trip:startTime ?start."
+				+ "?activity trip:endTime ?end."
+				+ "FILTER(?start < 24) ."
+				+ "FILTER(?end > 18) }";
+					
+		return executeQuery(query);
+	}
+	
+	public String queryEight(String cat) {
+		String query = prefix + "SELECT ?activity ?price \n "
+				+ "WHERE { "
+				+ "?activity trip:hasCategory trip:"+cat+"."
+				+ "?activity trip:price ?price.}";
+					
+		return executeQuery(query);
+	}
+	
+	public String queryNine(String cat) {
+		String query = prefix + "SELECT ?activity ?price \n "
+				+ "WHERE { "
+				+ "?activity trip:hasCategory trip:"+cat+"."
+				+ "?activity trip:price ?price.}"
+				+ "\nORDER BY DESC(?price)";
+					
+		return executeQuery(query);
+	}
+
+	public String queryTen(String cat, String city) {
+		String query = prefix + "SELECT ?activity ?city \n"
+				+ "WHERE {"
+				+ "?activity rdf:type trip:Activity. \n"
+				+ "?activity trip:hasCategory trip:" + cat + ". \n"
+				+ "?city rdf:type trip:City. \n"
+				+ "?city trip:includes ?activity. \n"
+				+ "?city trip:name ?name. \n"
+				+ "FILTER regex(?name, \"" + city + "\", \"i\"). }";
+					
+		return executeQuery(query);
+	}
+
+	public String queryTwelve(String cat, String match) {
+		String query = prefix + "SELECT ?subject \n"
+				+ "WHERE { "
+				+ "?subject trip:hasCategory trip:" + cat + "."
+				+ "?subject trip:name ?name."
+				+ "FILTER regex(?name, \"" + match +"\", \"i\"). }"; 
+					
+		return executeQuery(query);
+	}
+
+	public String queryThirteen(String cat, int maxPrice) {
+		String query = prefix + "SELECT ?subject ?price \n"
+				+ "WHERE { "
+				+ "?subject trip:hasCategory trip:" + cat + "."
+				+ "?subject trip:price ?price."
+				+ "FILTER(?price < " + maxPrice + ")."
+				+ "}"; 
+					
+		return executeQuery(query);
+	}
 
 	public String querySixteen(String me){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
@@ -100,6 +176,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().queryFive("Historical", 4));
+		System.out.println(OntologyLink.getInstance().queryThirteen("Entertainment", 10000));
 	}
 }
