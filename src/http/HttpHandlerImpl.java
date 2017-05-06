@@ -97,8 +97,10 @@ public class HttpHandlerImpl {
 				return;
 			}
 			String maxP = map.get("maxPrice");
+			String duration = map.get("duration");
+			int iDuration = duration == null? -1: Integer.parseInt(duration);
 			int iMaxP = maxP == null? -1 : Integer.parseInt(maxP);
-			String result = OntologyLink.getInstance().querySix(map.get("category"), iMaxP);
+			String result = OntologyLink.getInstance().querySix(map.get("category"), iMaxP, iDuration);
 			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
