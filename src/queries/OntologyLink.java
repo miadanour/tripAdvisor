@@ -156,6 +156,32 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 
+	public String queryFourteen(String user, String cat) {
+		String query = prefix + "SELECT ?me ?category ?activity \n"
+				+ "WHERE {"
+				+ "?me rdf:type trip:User."
+				+ "?me trip:name ?usrname."
+				+ "?me trip:interestedIn ?interest."
+				+ "?interest rdf:type trip:Interest."
+				+ "?interest trip:hasCategory trip:" + cat + "."
+				+ "?activity trip:hasCategory trip:" + cat + "."
+				+ "?activity trip:name ?name."
+				+ "?interest trip:type ?type."
+				+ "FILTER regex(str(?name),  str(?type), \"i\")."
+				+ "FILTER regex(str(?usrname),  \"" + user + "\", \"i\")."
+				+ "}"; 
+					
+		return executeQuery(query);
+	}
+
+	public String queryFifteen(String cat) {
+		String query = prefix + "SELECT * \n"
+				+ "WHERE { "
+				+ "?activity trip:hasCategory trip:" + cat + ".}"; 
+					
+		return executeQuery(query);
+	}
+
 	public String querySixteen(String me, String category){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
 				"WHERE { ?me rdf:type trip:User. " + "\n" + 

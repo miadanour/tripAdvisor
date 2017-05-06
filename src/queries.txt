@@ -96,17 +96,24 @@ SELECT ?subject
 	}
 
 <---------------13---------------->
-SELECT ?subject
+SELECT ?subject ?price
 	WHERE { 
 		?subject trip:hasCategory trip:Sport.
-		?subject trip:name ?name.
-		FILTER regex(?name, "swimming", "i"). 
+		?subject trip:price ?price.
+		FILTER(?price < 24).
 	}
 
 <---------------14---------------->
-SELECT *
+SELECT ?me 
 	WHERE {
-		?activity trip:Type trip
+		?me rdf:type trip:User.
+		?me trip:interestedIn ?interest.
+		?interest rdf:type trip:Interest.
+		?interest trip:type ?type.
+		?interest trip:hasCategory ?category.
+		?activity trip:hasCategory ?category.
+		?activity trip:name ?name.
+		FILTER regex(?name,  ?type, "i"). 
 	}
 
 <---------------15---------------->
@@ -116,14 +123,12 @@ WHERE { ?activity trip:hasCategory trip:Entertainment }
 <---------------16---------------->
 SELECT ?me ?activity ?interest
 WHERE {
-	?me rdf:type trip:User.
-	?me trip:name ?x.
+	?me rdf:type trip:Person 
 	?me trip:interestedIn ?interest .
-	?interest rdf:type trip:Interest .
-	?interest trip:hasCategory ?category.
-	?activity trip:hasCategory ?category. 
-	filter regex (?x, "islam")
-}
+	?interest trip:type ?type .
+	?activity trip:hasCategory trip:Entertainment . 
+	FILTER(REGEX(str(?activity), str(?interest)))}
+
 <---------------17----------------->
 SELECT *
 	WHERE {
