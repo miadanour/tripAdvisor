@@ -61,10 +61,13 @@ public class OntologyLink {
 
 	public String querySixteen(String me){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
-				"WHERE { ?me trip:interestedIn ?interest ." + "\n" + 
-				"?interest trip:type ?type ." + "\n" + 
-				"?activity trip:hasCategory trip:Entertainment ." + "\n" +  
+				"WHERE { ?me rdf:type trip:User. " + 
+				
+				"?me trip:interestedIn ?interest. " + 
+				"?interest trip:type ?type ." +  
+				"?activity trip:hasCategory trip:Entertainment ." +   
 				"FILTER(REGEX(str(?activity), str(?interest)))}";
+		System.out.println(query);
 		
 		return executeQuery(query);
 	}
@@ -84,6 +87,7 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().hasCategory("Entertainment"));
+		
+		System.out.println(OntologyLink.getInstance().querySixteen("ahmed"));
 	}
 }
