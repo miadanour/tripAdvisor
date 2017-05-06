@@ -148,13 +148,13 @@ SELECT *
 }
 	
 <---------------19----------------->
-SELECT *
-	WHERE {
-		?activity rdf:type trip:Entertainment
-		?activity trip:Duration trip:?a
-		?subject luxor:startTime ?start.
-		filter(?start > 5 && ?start < 18)
-	}
+SELECT ?subject ?duration
+WHERE { ?subject trip:hasCategory trip:Entertainment .
+	?subject trip:duration ?duration.
+	?subject trip:startTime ?startTime.
+	filter (?duration <7 && ?startTime <10).
+
+}
 
 <---------------22----------------->
 SELECT *

@@ -77,19 +77,22 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 	
-	public String querySix(String cat, int maxPrice) {
+	public String querySix(String cat, int maxPrice, int duration) {
 		String query = prefix + "SELECT ?activity ?start ?end \n "
 				+ "WHERE { "
 				+ "?activity trip:hasCategory trip:"+cat+"."
 				+ "?activity trip:startTime ?start."
 				+ "?activity trip:endTime ?end."
 				+ "?activity trip:price ?price."
+				+ "?activity trip:duration ?duration."
 				+ "FILTER(?start < 17) ."
 				+ "FILTER(?end > 6) ";
 		if (maxPrice != -1)
-			query +=  ".FILTER(?price < "+ maxPrice +")}";
-		else 
-			query += "}";
+			query +=  ".FILTER(?price < "+ maxPrice +")";
+		if (duration != -1)
+			query +=  ".FILTER(?duration < "+ duration+")";
+		
+		query += "}";
 					
 		return executeQuery(query);
 	}

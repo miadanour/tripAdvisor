@@ -27,10 +27,9 @@ public class ServerImpl {
 		
 		server.createContext("/query16", HttpHandlerImpl.querySixteen);
 		// query 17 goes to query 6 with category parameter as Entertainment
-		// query 18 goes to query 6 with category parameter as Entertainment and maxPrice with required value
+		// query 18 goes to query 6 with category=Entertainment and maxPrice=value
+		// query 19 goes to query 6 with category=Entertainment and duration=value
 		
 		server.start();
-		
-
 	}
 }
