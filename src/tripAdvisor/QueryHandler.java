@@ -1,7 +1,9 @@
 package tripAdvisor;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 
+import org.apache.jena.atlas.json.JsonObject;
 import org.apache.jena.ontology.OntModelSpec;
 import org.apache.jena.query.Query;
 import org.apache.jena.query.QueryExecution;
@@ -9,6 +11,7 @@ import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
@@ -26,7 +29,7 @@ public class QueryHandler {
 	}
 
 	public void bestSeason(String season) {
-		String query = prefix + "SELECT ?city" + "WHERE { ?city trip:bestSeason ?season." + "FILTER regex(?season, "
+		String query = prefix + "SELECT ?city \n" + "WHERE { ?city trip:bestSeason ?season." + "FILTER regex(?season, "
 				+ '"' + season + '"' + ")}";
 		executeQuery(query, "city");
 
@@ -38,7 +41,7 @@ public class QueryHandler {
 	}
 
 	public void includes(String cat) {
-		String query = prefix + "SELECT *" + "WHERE {" + "?city rdf:type trip:City.\n"
+		String query = prefix + "SELECT * \n" + "WHERE {" + "?city rdf:type trip:City.\n"
 				+ "?city trip:includes ?activity.\n" + "?activity trip:hasCategory trip:" + cat + "}";
 		executeQuery(query, "city");
 	}
@@ -54,7 +57,17 @@ public class QueryHandler {
 		QueryExecution qexec = QueryExecutionFactory.create(query, model);
 
 		ResultSet results = qexec.execSelect();
+		
+		// write to a ByteArrayOutputStream
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 
+		ResultSetFormatter.outputAsJSON(outputStream, results);
+
+		// and turn that into a String
+		String json = new String(outputStream.toByteArray());
+
+		System.out.println(json);
+		
 		while (results.hasNext()) {
 			QuerySolution sol = results.nextSolution();
 			RDFNode items = sol.get(wanted);
@@ -65,6 +78,6 @@ public class QueryHandler {
 	public static void main(String[] args) throws FileNotFoundException {
 		QueryHandler x = new QueryHandler();
 		x.createModel();
-		x.bestSeason("Winter");
+		x.bestSeason("Spring");
 	}
 }
