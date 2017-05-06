@@ -1,5 +1,6 @@
-package tripAdvisor;
+package queries;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 
 import org.apache.jena.ontology.OntModelSpec;
@@ -9,11 +10,12 @@ import org.apache.jena.query.QueryExecutionFactory;
 import org.apache.jena.query.QueryFactory;
 import org.apache.jena.query.QuerySolution;
 import org.apache.jena.query.ResultSet;
+import org.apache.jena.query.ResultSetFormatter;
 import org.apache.jena.rdf.model.Model;
 import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.RDFNode;
 
-public class QueryHandler {
+public class OntologyLink {
 	private Model model;
 	String prefix = "PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>"
 			+ "PREFIX owl: <http://www.w3.org/2002/07/owl#>" + "PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>"
@@ -26,10 +28,9 @@ public class QueryHandler {
 	}
 
 	public void bestSeason(String season) {
-		String query = prefix + "SELECT ?city" + "WHERE { ?city trip:bestSeason ?season." + "FILTER regex(?season, "
+		String query = prefix + "SELECT ?city" + "\n" + "WHERE { ?city trip:bestSeason ?season." + "FILTER regex(?season, "
 				+ '"' + season + '"' + ")}";
 		executeQuery(query, "city");
-
 	}
 
 	public void hasCategory(String cat) {
@@ -54,7 +55,12 @@ public class QueryHandler {
 		QueryExecution qexec = QueryExecutionFactory.create(query, model);
 
 		ResultSet results = qexec.execSelect();
+		
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+		ResultSetFormatter.outputAsJSON(outputStream, results);
+		String json = new String(outputStream.toByteArray());
 
+		System.out.println(json);
 		while (results.hasNext()) {
 			QuerySolution sol = results.nextSolution();
 			RDFNode items = sol.get(wanted);
@@ -63,7 +69,7 @@ public class QueryHandler {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		QueryHandler x = new QueryHandler();
+		OntologyLink x = new OntologyLink();
 		x.createModel();
 		x.bestSeason("Winter");
 	}
