@@ -65,6 +65,16 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 
+	public String queryFive(String cat, int rank) {
+		String query = prefix + "SELECT ?activity ?rank " +"\n" 
+				+" WHERE{?activity trip:hasCategory trip:"+cat+"."
+				+ "?review trip:rated ?activity."
+				+ "?review trip:rate "+rank+".}";
+					
+		return executeQuery(query);
+	}
+	
+
 	public String querySixteen(String me){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
 				"WHERE { ?me trip:interestedIn ?interest ." + "\n" + 
@@ -90,6 +100,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().queryFour("Historical"));
+		System.out.println(OntologyLink.getInstance().queryFive("Historical", 4));
 	}
 }
