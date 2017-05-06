@@ -68,16 +68,18 @@ public class OntologyLink {
 	public String querySixteen(String me){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
 				"WHERE { ?me rdf:type trip:User. " + 
-				"?me trip:name 'ahmed'. "+
+				//"?me trip:name ahmed. "+
 				"?me trip:interestedIn ?interest. " + 
-				"?interest trip:type ?type ." +  
-				"?activity trip:hasCategory trip:Entertainment ." +   
-				"FILTER(REGEX(str(?activity), str(?interest)))}";
+				"?interest rdf:type trip:Interest ." +
+				"?interest trip:hasCategory trip:Entertainment." +
+				"?activity trip:hasCategory trip:Entertainment" +   
+				"}";
 		System.out.println(query);
 		
 		return executeQuery(query);
 	}
 		
+	
 	
 	public String executeQuery(String querystr) {
 		Query query = QueryFactory.create(querystr);

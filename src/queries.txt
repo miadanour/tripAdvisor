@@ -103,12 +103,13 @@ WHERE { ?activity trip:hasCategory trip:Entertainment }
 <---------------16---------------->
 SELECT ?me ?activity ?interest
 WHERE {
-	?me rdf:type trip:Person 
+	?me rdf:type trip:User. 
+	?me trip:name ?x.
 	?me trip:interestedIn ?interest .
-	?interest trip:type ?type .
-	?activity trip:hasCategory trip:Entertainment . 
-	FILTER(REGEX(str(?activity), str(?interest)))}
-
+	?interest rdf:type trip:Interest .
+	?interest trip:hasCategory ?category.
+	?activity trip:hasCategory ?category. 
+}
 <---------------17----------------->
 SELECT *
 	WHERE {
