@@ -3993,6 +3993,216 @@
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">14.0</startTime>
         <type>Coffee</type>
     </owl:NamedIndividual>
+
+     <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Users
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+    
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ahmed">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>ahmed</name>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#john">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>john</name>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#mirna">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>female</gender>
+		<name>mirna</name>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#angelina">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>female</gender>
+		<name>angelina</name>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#luna">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>female</gender>
+		<name>luna</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ziggs">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>ziggs</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#gnar">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>gnar</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ash">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>female</gender>
+		<name>ash</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#kassadin">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>kassadin</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ali">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>ali</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#randa">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>female</gender>
+		<name>randa</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#sally">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>female</gender>
+		<name>sally</name>
+	</owl:NamedIndividual>
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#islam">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+		<gender>male</gender>
+		<name>islam</name>
+	</owl:NamedIndividual>
+	
+	 <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Interests
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+	   
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#shoppingInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+		<type>shopping</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#italianInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+		<type>italian</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#footballInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>football</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#museumsInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+		<type>museums</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#booksInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+		<type>books</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#orientalInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+		<type>oriental</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TemplesInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+		<type>Temples</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#kayakingInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>kayaking</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#HandballInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>Handball</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#CoffeeInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+		<type>Coffee</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#JewelryInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+		<type>Jewelry</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#DancingInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+		<type>Dancing</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#TombsInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+		<type>Tombs</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#SkiingInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>Skiing</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#chineeseInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Food"/>
+		<type>chineese</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#CanoeingInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>Canoeing</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#RunningInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>Running</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#MountainClimbingInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
+		<type>MountainClimbing</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#toursInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Entertainment"/>
+		<type>tours</type>
+	</owl:NamedIndividual>
+	
+	<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#MosqueInterest">
+		<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Interest"/>
+		<hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Historical"/>
+		<type>Mosque</type>
+	</owl:NamedIndividual>
+		
+    
+    
+
 </rdf:RDF>
 
 

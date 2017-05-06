@@ -75,16 +75,23 @@ public class OntologyLink {
 	}
 	
 
-	public String querySixteen(String me){
+	public String querySixteen(String me, String category){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
-				"WHERE { ?me trip:interestedIn ?interest ." + "\n" + 
-				"?interest trip:type ?type ." + "\n" + 
-				"?activity trip:hasCategory trip:Entertainment ." + "\n" +  
-				"FILTER(REGEX(str(?activity), str(?interest)))}";
+				"WHERE { ?me rdf:type trip:User. " + "\n" + 
+				"?me trip:name ?x. "+ "\n" +
+				"?me trip:interestedIn ?interest. " + "\n" + 
+				"?interest rdf:type trip:Interest." + "\n" +
+				"?interest trip:hasCategory ?category." + "\n" +
+				"?activity trip:hasCategory ?category." + "\n" +
+				"filter regex (?x, \""+ me +"\")" + "\n" +
+				"filter regex (?category, \""+ category +"\")" + "\n" +
+				"}";
+		System.out.println(query);
 		
 		return executeQuery(query);
 	}
 		
+	
 	
 	public String executeQuery(String querystr) {
 		Query query = QueryFactory.create(querystr);
@@ -100,6 +107,7 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().queryFive("Historical", 4));
+		System.out.println(OntologyLink.getInstance().querySixteen("islam", "Sport"));
+
 	}
 }
