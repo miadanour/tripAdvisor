@@ -96,7 +96,9 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().querySix(map.get("category"));
+			String maxP = map.get("maxPrice");
+			int iMaxP = maxP == null? -1 : Integer.parseInt(maxP);
+			String result = OntologyLink.getInstance().querySix(map.get("category"), iMaxP);
 			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
@@ -202,20 +204,6 @@ public class HttpHandlerImpl {
 		}
 	};
 	
-	public static HttpHandler querySeventeen = new HttpHandler() {
-		@Override
-		public void handle(HttpExchange t) throws IOException {
-			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
-			if(map == null || map.get("name") == null) {
-				outputResult(t, 400, "Bad Request, Missing Parameters");
-				return;
-			}
-			String result = OntologyLink.getInstance().querySixteen(map.get("name"), map.get("category")); 
-			outputResult(t, 200, result);
-		}
-	};
-	
-
 	
 	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());
