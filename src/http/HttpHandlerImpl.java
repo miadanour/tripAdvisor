@@ -73,6 +73,21 @@ public class HttpHandlerImpl {
 		}
 	};
 	
+	public static final HttpHandler queryFive = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null || map.get("rank") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance()
+					.queryFive(map.get("category"), Integer.parseInt(map.get("rank")));
+			System.out.println("1" + result);
+			outputResult(t, 200, result);
+		}
+	};
+	
 	public static HttpHandler querySixteen = new HttpHandler() {
 		@Override
 		public void handle(HttpExchange t) throws IOException {
@@ -103,7 +118,6 @@ public class HttpHandlerImpl {
 	
 	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());
-		t.getResponseHeaders().add("Access-Control-Allow-Origin", "http://localhost");
 		OutputStream os = t.getResponseBody();
 		os.write(result.getBytes());
 		os.close();

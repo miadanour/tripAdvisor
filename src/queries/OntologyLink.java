@@ -65,6 +65,16 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 
+	public String queryFive(String cat, int rank) {
+		String query = prefix + "SELECT ?activity ?rank " +"\n" 
+				+" WHERE{?activity trip:hasCategory trip:"+cat+"."
+				+ "?review trip:rated ?activity."
+				+ "?review trip:rate "+rank+".}";
+					
+		return executeQuery(query);
+	}
+	
+
 	public String querySixteen(String me, String category){
 		String query = prefix + "SELECT ?me ?activity ?interest" + "\n" +
 				"WHERE { ?me rdf:type trip:User. " + "\n" + 
