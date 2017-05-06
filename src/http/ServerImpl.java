@@ -1,10 +1,8 @@
-package tripAdvisor;
+package http;
 
 import java.net.InetSocketAddress;
 
 import com.sun.net.httpserver.HttpServer;
-
-import http.HttpHandlerImpl;
 
 @SuppressWarnings("restriction")
 public class ServerImpl {
@@ -14,7 +12,10 @@ public class ServerImpl {
 		server.createContext("/query1", HttpHandlerImpl.queryOne);
 		server.createContext("/query2", HttpHandlerImpl.queryTwo);
 		server.createContext("/query3", HttpHandlerImpl.queryThree);
+		server.createContext("/query4", HttpHandlerImpl.queryFour);
 		
 		server.start();
+		
+
 	}
 }

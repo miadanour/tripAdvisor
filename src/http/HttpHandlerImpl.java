@@ -23,7 +23,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().bestSeason(map.get("season"));
+			String result = OntologyLink.getInstance().queryOne(map.get("season"));
 			
 			outputResult(t, 200, result);
 		}
@@ -37,7 +37,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().hasCategory(map.get("category"));
+			String result = OntologyLink.getInstance().queryTwo(map.get("category"));
 
 			outputResult(t, 200, result);
 		}
@@ -52,8 +52,23 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().includesActivityWithCategory(map.get("category"));
+			String result = OntologyLink.getInstance().queryThree(map.get("category"));
 
+			outputResult(t, 200, result);
+		}
+	};
+	
+
+	public static final HttpHandler queryFour = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("category") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = OntologyLink.getInstance().queryFour(map.get("category"));
+			System.out.println("1" + result);
 			outputResult(t, 200, result);
 		}
 	};
@@ -75,6 +90,7 @@ public class HttpHandlerImpl {
 	
 	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());
+		t.getResponseHeaders().add("Access-Control-Allow-Origin", "http://localhost");
 		OutputStream os = t.getResponseBody();
 		os.write(result.getBytes());
 		os.close();
