@@ -103,12 +103,13 @@ WHERE { ?activity trip:hasCategory trip:Entertainment }
 <---------------16---------------->
 SELECT ?me ?activity ?interest
 WHERE {
-	?me rdf:type trip:User. 
+	?me rdf:type trip:User.
 	?me trip:name ?x.
 	?me trip:interestedIn ?interest .
 	?interest rdf:type trip:Interest .
 	?interest trip:hasCategory ?category.
 	?activity trip:hasCategory ?category. 
+	filter regex (?x, "islam")
 }
 <---------------17----------------->
 SELECT *
