@@ -35,6 +35,10 @@ public class ServerImpl {
 		// query 18 goes to query 6 with category=Entertainment and maxPrice=value
 		// query 19 goes to query 6 with category=Entertainment and duration=value
 		// query 20 goes to query 15 with category=Food
+		server.createContext("/query21", HttpHandlerImpl.queryTwentyOne);
+		// query 22 goes to query 21 with cuisine=value and cheap=True
+		server.createContext("/query23", HttpHandlerImpl.queryTwentyThree);
+		
 		server.start();
 	}
 }

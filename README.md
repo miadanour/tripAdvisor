@@ -22,5 +22,7 @@
 | querySeventeen | ***category***:String | goes to query 6 with ***category***:Entertainment |
 | queryEighteen | ***category***:String, ***maxPrice***:int | goes to query 6 with ***category***:Entertainment and ***maxPrice***:value |
 | queryNinteen | ***category***:String, ***duration***:int | goes to query 6 with ***category***:Entertainment and ***duration***:value |  
-| queryTwenty | ***category***:String | goes to query 6 with ***category***:Food |
+| queryTwenty | ***category***:String | goes to query 15 with ***category***:Food |
+| queryTwentyOne | ***cuisine***:String, ***cheap***:boolean | all restaurants with the cuisine ***cuisine*** and ignore ***cheap***  |
+| queryTwentyTwo | ***cuisine***:String, ***cheap***:boolean| goes to query 21 with ***cheap***:True |
 <!-- done ^ -->

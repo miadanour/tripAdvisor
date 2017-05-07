@@ -222,6 +222,37 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 	
+	public String queryTwentyOne(String cuisine, Boolean cheap){
+		String query = prefix + "SELECT * \n"
+				+ "WHERE { "
+				+ "?subject trip:hasCategory trip:Food."
+				+ "?subject trip:type ?type."
+				+ "?subject trip:price ?price."
+				+ "FILTER regex(?type, \"" + cuisine + "\").";
+		if (cheap)
+			query += "FILTER(?price < 100).";
+		query += "}"; 
+		System.out.println(query);
+		
+		return executeQuery(query);
+	}
+	
+	public String queryTwentyThree(String cuisine){
+		String query = prefix + "SELECT * \n"
+				+ "WHERE { "
+				+ "?rating rdf:type trip:Review."
+				+ "?rating trip:rated ?activity."
+				+ "?rating trip:rate ?rate."
+				+ "?activity trip:hasCategory trip:Food.";
+		if (cuisine != ""){
+			query += "?activity trip:type ?type.";
+			query += "FILTER regex(?type, \"" + cuisine + "\").";
+		}
+		query += "}"; 
+		System.out.println(query);
+		
+		return executeQuery(query);
+	}
 	
 	public String includes(String city) {
 		String query = prefix + "SELECT ?activity ?city \n"
@@ -259,8 +290,8 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
+		System.out.println(OntologyLink.getInstance().queryTwentyThree(""));
 		System.out.println(OntologyLink.getInstance().user("ahmed"));
-
 	}
 
 
