@@ -1,0 +1,65 @@
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ahmed">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>ahmed</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#john">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>john</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#mirna">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>female</gender>
+	<name>mirna</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#angelina">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>female</gender>
+	<name>angelina</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#luna">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>female</gender>
+	<name>luna</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ziggs">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>ziggs</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#gnar">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>gnar</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ash">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>female</gender>
+	<name>ash</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#kassadin">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>kassadin</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#ali">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>ali</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#randa">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>female</gender>
+	<name>randa</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#sally">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>female</gender>
+	<name>sally</name>
+</owl:NamedIndividual>
+<owl:NamedIndividual rdf:about="http://www.semanticweb.org/tripAdvisor/Trip#islam">
+	<rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#User"/>
+	<gender>male</gender>
+	<name>islam</name>
+</owl:NamedIndividual>

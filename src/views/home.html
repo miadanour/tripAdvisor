@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <title>Trip Planner</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                logo
+            </li>
+            <li>
+                <button class="btn pageswitch">Cities</button>
+            </li>
+            <li>
+                <button class="btn pageswitch">Activities</button>
+            </li>
+        </ul>
+    </nav>
+    <div class="welcome-page">
+        <div class="login cloacked" style="display: block;">
+            <ul>
+                <li>
+                    <input type="text" class="form-control" name="username" id="username" placeholder="username">
+                </li>
+                <li>
+                    <button class="btn btn-primary login-btn" type="button"> Login</button>
+                </li>
+            </ul>
+        </div>
+        <ul class="searchbar cloacked">
+            <li>
+                <div class="dropdown show">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Category
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sport</a></li>
+                        <li><a href="#">Historical</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Food</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown sortCat">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sort
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Price</a></li>
+                        <li><a href="#">Rank</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown rating">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Rating
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">1</a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown maxprice">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Max Price
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">100</a></li>
+                        <li><a href="#">200</a></li>
+                        <li><a href="#">500</a></li>
+                        <li><a href="#">1000</a></li>
+                        <li><a href="#">2000</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <input type="text" class="form-control" name="Keyword" id="Keyword" placeholder="Keyword">
+            </li>
+            <li>
+                <input type="number" min="0" step="1" class="form-control" id="duration" placeholder="Duration">
+            </li>
+            <li>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="" id="Price"> Price
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value="" id="night"> Night
+                    </label>
+                </div>
+            </li>
+             <li>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" id="interests" value="interests"> Interests
+                    </label>
+                </div>
+            </li>
+        </ul>
+        <ul class="searchbar cloacked">
+            <li>
+                <div class="dropdown city">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Cities
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Luxor</a></li>
+                        <li><a href="#">Aswan</a></li>
+                        <li><a href="#">Cairo</a></li>
+                        <li><a href="#">Alexandria</a></li>
+                        <li><a href="#">Hurghada</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown season">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Season
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Winter</a></li>
+                        <li><a href="#">Spring</a></li>
+                        <li><a href="#">Summer</a></li>
+                        <li><a href="#">Fall</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown category">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">of Category
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Historical</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Food</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown includescategory">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">includes activities
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Historical</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Food</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="pop-activities">
+        <div class="card">
+            <img src="">
+            <a href="/NAME"> NAME </a>
+            <p>price </p>
+        </div>
+    </div>
+</body>
+<script src="main.js"></script>
+<script src="bootstrap.min.js"></script>
+
+</html>

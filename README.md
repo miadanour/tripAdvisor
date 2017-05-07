@@ -16,6 +16,7 @@
 | queryEleven |  | same as ***queryEight*** |
 | queryTwelve | ***category***:String, ***match***:String | all activities of category ***category*** that has the string ***match*** in its name |
 | queryThirteen | ***category***:String, ***maxPrice***:int | all activities of category ***category*** that have their price less than ***maxPrice*** |
+<!-- done ^ -->
 | queryFourteen | ***category***:String, ***user***:String | all activities of category ***category*** that matches as an interest to user ***user*** |
 | queryFifteen | ***category***:String | all activities with category ***category*** |
 | querySeventeen | ***category***:String | goes to query 6 with ***category***:Entertainment |

@@ -791,6 +791,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <location>Nady El Zamalek , El hegaz, Giza.</location>
         <name>Badminton</name>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">199</price>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</endTime>
     </owl:NamedIndividual>
@@ -843,6 +844,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
         <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</price>
         <name>Basket ball</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
     </owl:NamedIndividual>
@@ -856,6 +858,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
         <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">250</price>
         <name>Basket ball</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
     </owl:NamedIndividual>
@@ -869,6 +872,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
         <location>Luxor Sports Club</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">300</price>
         <name>BasketBall</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
     </owl:NamedIndividual>
@@ -908,6 +912,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
         <location>Luxor Sports Club</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</price>
         <name>Boxing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
     </owl:NamedIndividual>
@@ -1068,6 +1073,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1000</price>
         <location>Blue Water Dive Resort,Hurghada</location>
         <name>Diving</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
@@ -1082,6 +1088,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
         <location>Son Dijou ,Hurghada 84512.</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">900</price>
         <name>Diving</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
     </owl:NamedIndividual>
@@ -1095,6 +1102,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
         <location>VooDoo Divers, Bella Vista Resort, Hurghada</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</price>
         <name>Diving</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
     </owl:NamedIndividual>
@@ -1107,6 +1115,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">700</price>
         <location>Sinai Excursions,Hurghada</location>
         <name>Diving</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
@@ -1267,6 +1276,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
         <location>Nady El Ahly Madinet Nasr, Cairo, Hassan Ma&apos;moon.</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">350</price>
         <name>Fencing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</startTime>
     </owl:NamedIndividual>
@@ -1279,6 +1289,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">190</price>
         <name>Fencing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
@@ -1292,6 +1303,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</price>
         <location>Blue Water Dive Resort,Hurghada</location>
         <name>Fishing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
@@ -1306,6 +1318,7 @@
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
         <location>Son Dijou ,Hurghada 84512.</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1200</price>
         <name>Fishing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
     </owl:NamedIndividual>
@@ -1318,6 +1331,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">15.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">600</price>
         <location>VooDoo Divers, Bella Vista Resort, Hurghada</location>
         <name>Fishing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">7.0</startTime>
@@ -1331,6 +1345,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</price>
         <location>Sinai Excursions,Hurghada</location>
         <name>Fishing</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
@@ -1357,6 +1372,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">20.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">800</price>
         <location>Aswan Sports Club, Cairo- Aswan Agricultural road</location>
         <name>Football</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
@@ -1370,6 +1386,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <endTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">16.0</endTime>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</price>
         <location>Luxor Sports Club</location>
         <name>Foot ball</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">8.0</startTime>
@@ -1383,6 +1400,7 @@
         <rdf:type rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Activity"/>
         <hasCategory rdf:resource="http://www.semanticweb.org/tripAdvisor/Trip#Sport"/>
         <location>Nady El Zamalek , El hegaz, Giza.</location>
+        <price rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">500</price>
         <name>Foot ball</name>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">11.0</startTime>
         <startTime rdf:datatype="http://www.w3.org/2001/XMLSchema#float">19.0</startTime>
