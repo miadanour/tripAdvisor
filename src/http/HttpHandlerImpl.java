@@ -237,6 +237,23 @@ public class HttpHandlerImpl {
 		}
 	};
 	
+	public static HttpHandler queryTwentyOne = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if(map == null || map.get("cuisine") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String cheapS = map.get("cheap");
+			
+			Boolean cheap = cheapS == null? false: Boolean.parseBoolean(cheapS);
+			
+			String result = OntologyLink.getInstance().queryTwentyOne(map.get("cuisine"), cheap)+");"; 
+			outputResult(t, 200, result);
+		}
+	};
+	
 	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());
 		OutputStream os = t.getResponseBody();

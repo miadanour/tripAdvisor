@@ -205,6 +205,20 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 	
+	public String queryTwentyOne(String cuisine, Boolean cheap){
+		String query = prefix + "SELECT * \n"
+				+ "WHERE { "
+				+ "?subject trip:hasCategory trip:Food."
+				+ "?subject trip:type ?type."
+				+ "?subject trip:price ?price."
+				+ "FILTER regex(?type, \"" + cuisine + "\").";
+		if (cheap)
+			query += "FILTER(?price < 100).";
+		query += "}"; 
+		System.out.println(query);
+		
+		return executeQuery(query);
+	}
 	
 	public String executeQuery(String querystr) {
 		Query query = QueryFactory.create(querystr);
@@ -220,6 +234,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().queryFifteen("Food"));
+		System.out.println(OntologyLink.getInstance().queryTwentyOne("italian", false));
 	}
 }
