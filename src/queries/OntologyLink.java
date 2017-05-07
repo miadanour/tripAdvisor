@@ -220,6 +220,23 @@ public class OntologyLink {
 		return executeQuery(query);
 	}
 	
+	public String queryTwentyThree(String cuisine){
+		String query = prefix + "SELECT * \n"
+				+ "WHERE { "
+				+ "?rating rdf:type trip:Review."
+				+ "?rating trip:rated ?activity."
+				+ "?rating trip:rate ?rate."
+				+ "?activity trip:hasCategory trip:Food.";
+		if (cuisine != ""){
+			query += "?activity trip:type ?type.";
+			query += "FILTER regex(?type, \"" + cuisine + "\").";
+		}
+		query += "}"; 
+		System.out.println(query);
+		
+		return executeQuery(query);
+	}
+	
 	public String executeQuery(String querystr) {
 		Query query = QueryFactory.create(querystr);
 		QueryExecution qexec = QueryExecutionFactory.create(query, model);
@@ -234,6 +251,6 @@ public class OntologyLink {
 	}
 
 	public static void main(String[] args) throws FileNotFoundException {
-		System.out.println(OntologyLink.getInstance().queryTwentyOne("italian", false));
+		System.out.println(OntologyLink.getInstance().queryTwentyThree(""));
 	}
 }

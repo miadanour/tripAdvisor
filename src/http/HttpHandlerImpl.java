@@ -254,6 +254,23 @@ public class HttpHandlerImpl {
 		}
 	};
 	
+	public static HttpHandler queryTwentyThree = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			String cuisine;
+			if(map == null) {
+				cuisine = "";
+			}
+			else{
+				cuisine = map.get("cuisine");
+				cuisine = (cuisine == null) ? "": cuisine;
+			}
+			String result = OntologyLink.getInstance().queryTwentyThree(cuisine)+");"; 
+			outputResult(t, 200, result);
+		}
+	};
+	
 	public static void outputResult(HttpExchange t, int status, String result) throws IOException {
 		t.sendResponseHeaders(status, result.length());
 		OutputStream os = t.getResponseBody();
