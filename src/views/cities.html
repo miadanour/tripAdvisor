@@ -10,17 +10,20 @@
 
 <body>
     <nav>
-        <u>
-        <li>
-        	logo
-        </li>
-		<li>
-			<a href="/Categories">Categories</a>
-		</li>
-		<li>
-			<a href="/Trip planner">Trip planner</a>
-		</li>
-	</u>
+        <ul>
+            <li>
+                logo
+            </li>
+            <li>
+                <a href="cities.html">Cities</a>
+            </li>
+            <li>
+                <a href="activities.html">Activities</a>
+            </li>
+            <li>
+                <a href="trip.html">Trip planner</a>
+            </li>
+        </ul>
     </nav>
     <div class="welcome-page">
         <ul class="searchbar">
@@ -37,8 +40,20 @@
                 </div>
             </li>
             <li>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Category
+                <div class="dropdown category">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">of Category
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">Sports</a></li>
+                        <li><a href="#">Historical</a></li>
+                        <li><a href="#">Entertainment</a></li>
+                        <li><a href="#">Food</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown includescategory">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">includes activities
                         <span class="caret"></span></button>
                     <ul class="dropdown-menu">
                         <li><a href="#">Sports</a></li>
@@ -52,17 +67,7 @@
     </div>
     <div class="pop-activities">
         <div class="card">
-            <img src="luxor-wallpaper.jpg">
-            <a href="/NAME"> NAME </a>
-            <p>price </p>
-        </div>
-        <div class="card">
-            <img src="luxor-wallpaper.jpg">
-            <a href="/NAME"> NAME </a>
-            <p>price </p>
-        </div>
-        <div class="card">
-            <img src="luxor-wallpaper.jpg">
+            <img src="">
             <a href="/NAME"> NAME </a>
             <p>price </p>
         </div>

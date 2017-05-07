@@ -20,7 +20,7 @@ nav ul{
 }
 nav li{
 
-	width: 25vw;
+	width: 18vw;
 	display: inline-block;
 }
 
@@ -41,7 +41,7 @@ nav:hover {
 .welcome-page {
     width: 100vw;
     height: 35vw;
-    background-image: url(luxor-wallpaper.jpg);
+    background-image: url(Luxor.jpg);
     background-size: 100%;
     display: flex;
     justify-content: center;
