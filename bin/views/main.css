@@ -24,6 +24,11 @@ nav li{
 	display: inline-block;
 }
 
+nav li a:hover {
+	text-decoration: none;
+	/* color: black; */
+}
+
 nav li a {
 	justify-content: center;
 	font-family: "Raleway";

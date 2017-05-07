@@ -19,3 +19,8 @@
 <!-- done ^ -->
 | queryFourteen | ***category***:String, ***user***:String | all activities of category ***category*** that matches as an interest to user ***user*** |
 | queryFifteen | ***category***:String | all activities with category ***category*** |
+| querySeventeen | ***category***:String | goes to query 6 with ***category***:Entertainment |
+| queryEighteen | ***category***:String, ***maxPrice***:int | goes to query 6 with ***category***:Entertainment and ***maxPrice***:value |
+| queryNinteen | ***category***:String, ***duration***:int | goes to query 6 with ***category***:Entertainment and ***duration***:value |  
+| queryTwenty | ***category***:String | goes to query 6 with ***category***:Food |
+<!-- done ^ -->

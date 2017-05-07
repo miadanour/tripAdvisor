@@ -8,6 +8,8 @@ var currentcity = "";
 var typingTimer;
 var doneTypingInterval = 2000;
 var username = "";
+var price = false;
+
 $(document).ready(function() {
     $('.login-btn').click(function() {
         username = $("#username").val();
@@ -62,7 +64,7 @@ $(document).ready(function() {
         var x = this.textContent;
         cat = x;
         console.log(x);
-        query8();
+        query15();
     });
 
     $('.rating li').click(function() {
@@ -112,6 +114,19 @@ $(document).ready(function() {
         } else {
             alert("you need to select a category first");
             this.checked = false;
+        }
+        this.checked = interests;
+    });
+
+    $("#Price").click(function() {
+
+        if (cat != "") {
+            if (interests) {
+                query8();
+            }
+            price = this.checked;
+        } else {
+            alert("you need to select a category first");
         }
         this.checked = interests;
     });
@@ -302,7 +317,7 @@ function query7() {
 
 function query8() {
     $.ajax({
-        url: "http://localhost:8000/query8?category=" + cat,
+        url: "http://localhost:8000/query8?category=" + cat +"&price="+price,
         crossDomain: true,
         dataType: 'jsonp',
         success: function(result) {}
@@ -355,7 +370,12 @@ function query14() {
 }
 
 function query15() {
-
+    $.ajax({
+        url: "http://localhost:8000/query8?category=" + cat,
+        crossDomain: true,
+        dataType: 'jsonp',
+        success: function(result) {}
+    });
 }
 
 function includes() {
