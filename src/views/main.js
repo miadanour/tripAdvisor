@@ -1,4 +1,6 @@
 var cat = "";
+var dur = "";
+var maxp = "";
 $(document).ready(function() {
     $('.season li').click(function() {
         var x = this.textContent;
@@ -51,6 +53,22 @@ $(document).ready(function() {
             var x = this.textContent;
             $.ajax({
                 url: "http://localhost:8000/query5?rank=" + x + "&category=" + cat,
+                crossDomain: true,
+                dataType: 'jsonp',
+                success: function(result) {}
+            });
+        }
+
+    });
+
+    $('.maxprice li').click(function() {
+        if (cat == "") {
+            alert("you need to select a category first");
+        } else {
+            var x = this.textContent;
+            $.ajax({
+                url: "http://localhost:8000/query6?maxprice=" + x + "&category=" + cat + 
+               ((dur=="")?"":dur)+((maxp=="")?"":maxp),
                 crossDomain: true,
                 dataType: 'jsonp',
                 success: function(result) {}
