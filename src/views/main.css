@@ -85,6 +85,29 @@ input, label{
 	font-weight: bold!important;
 }
 
+ul{
+	list-style: none;
+}
+.pageswitch{
+	display: block;
+	background: rgba(0, 0, 0, 0);
+	box-shadow: 0;
+}
+.cloacked{
+	display: none;
+}
+
+.login li{
+	margin: 10px;
+}
+
+.login ul {
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .searchbar{
 	background : rgba(221, 230, 222, 0.5);
 	padding: 10px;

@@ -122,7 +122,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryEight(map.get("category")) + ");";
+			String result = "activity(" +OntologyLink.getInstance().queryEight(map.get("category")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -135,7 +135,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryNine(map.get("category")) + ");";
+			String result = "activity(" +OntologyLink.getInstance().queryNine(map.get("category")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -148,7 +148,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryTen(map.get("category"), map.get("city")) + ");";
+			String result = "activity(" +OntologyLink.getInstance().queryTen(map.get("category"), map.get("city")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -161,7 +161,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryTwelve(map.get("category"), map.get("match")) + ");";
+			String result = "activity(" + OntologyLink.getInstance().queryTwelve(map.get("category"), map.get("match")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -174,7 +174,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryThirteen(map.get("category"),
+			String result = "activity(" +OntologyLink.getInstance().queryThirteen(map.get("category"),
 					Integer.parseInt(map.get("maxPrice"))) + ");";
 			outputResult(t, 200, result);
 		}
@@ -188,7 +188,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryFourteen(map.get("user"), map.get("category")) + ");";
+			String result = "activity(" +OntologyLink.getInstance().queryFourteen(map.get("user"), map.get("category")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -201,7 +201,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().queryFifteen(map.get("category")) + ");";
+			String result = "activity(" + OntologyLink.getInstance().queryFifteen(map.get("category")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -214,7 +214,7 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().querySixteen(map.get("name"), map.get("category")) + ");";
+			String result = "activity(" +OntologyLink.getInstance().querySixteen(map.get("name"), map.get("category")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
@@ -227,7 +227,55 @@ public class HttpHandlerImpl {
 				outputResult(t, 400, "Bad Request, Missing Parameters");
 				return;
 			}
-			String result = OntologyLink.getInstance().querySixteen(map.get("name"), map.get("category")) + ");";
+			String result = "activity(" +OntologyLink.getInstance().querySixteen(map.get("name"), map.get("category")) + ");";
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static HttpHandler activities = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			String result = "activity("+ OntologyLink.getInstance().activities() + ");";
+			outputResult(t, 200, result);
+		}
+	};
+	
+	
+	public static HttpHandler includes = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if (map == null || map.get("city") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = "activity("+ OntologyLink.getInstance().includes(map.get("city")) + ");";
+			outputResult(t, 200, result);
+		}
+	};
+	public static HttpHandler cities = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			String result = "city("+ OntologyLink.getInstance().cities() + ");";
+			outputResult(t, 200, result);
+		}
+	};
+	
+	public static HttpHandler login = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+		}
+	};
+	
+	public static HttpHandler user = new HttpHandler() {
+		@Override
+		public void handle(HttpExchange t) throws IOException {
+			Map<String, String> map = QueryParser.getInstance().parse(t.getRequestURI().getQuery());
+			if (map == null || map.get("username") == null) {
+				outputResult(t, 400, "Bad Request, Missing Parameters");
+				return;
+			}
+			String result = "user("+ OntologyLink.getInstance().user(map.get("username")) + ");";
 			outputResult(t, 200, result);
 		}
 	};
