@@ -8,9 +8,9 @@
 | queryThree | ***category***:String | all cities that contains activities of category ***category*** |
 | queryFour | ***category***:String | all activities of category ***category*** with their ranking sorted |
 | queryFive | ***category***:String,\<br/>***rank***:int | all activities of category ***category*** with their ranking equals to ***rank*** |
-<!-- done ^ -->
 | querySix | ***category***:String, ***maxPrice***:int(optional), ***duration***:int(optional) | all activities of category ***category*** that is open in daylight, has optional ***maxPrice*** and ***duration*** parameter for query 17 and 18 and 19. |
 | querySeven | ***category***:String | all activities of category ***category*** that are open at night |
+<!-- done ^ -->
 | queryEight | ***category***:String | all activities of category ***category*** along with their prices |
 | queryNine | ***category***:String | all activities of category ***category*** along with their prices sorted |
 | queryTen | ***category***:String,<br/> ***city***:String | all activities of category ***category*** in city ***city*** |

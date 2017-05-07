@@ -1,6 +1,7 @@
 var cat = "";
 var dur = "";
 var maxp = "";
+var night = false;
 $(document).ready(function() {
     $('.season li').click(function() {
         var x = this.textContent;
@@ -62,18 +63,53 @@ $(document).ready(function() {
     });
 
     $('.maxprice li').click(function() {
+        maxp = this.textContent;
         if (cat == "") {
             alert("you need to select a category first");
         } else {
-            var x = this.textContent;
             $.ajax({
-                url: "http://localhost:8000/query6?maxprice=" + x + "&category=" + cat + 
-               ((dur=="")?"":dur)+((maxp=="")?"":maxp),
+                url: "http://localhost:8000/query6?category=" + cat + "&maxPrice=" + maxp +
+                    ((dur == "") ? "" : dur),
                 crossDomain: true,
                 dataType: 'jsonp',
                 success: function(result) {}
             });
         }
+
+    });
+
+    $('input').click(function() {
+        console.log(this.checked);
+        if (this.name == "") {
+            dur = this.value;
+
+            if (cat != "") {
+                $.ajax({
+                    url: "http://localhost:8000/query6?category=" + cat +
+                        ((dur == "") ? "" : "&duration=" +
+                            dur) + ((maxp == "") ? "" : "&maxPrice=" + maxp),
+                    crossDomain: true,
+                    dataType: 'jsonp',
+                    success: function(result) {}
+                });
+            } else {
+                alert("you need to select a category first");
+            }
+        } else {
+            night = this.checked;
+            if (cat != "") {
+                $.ajax({
+                    url: "http://localhost:8000/query7?category=" + ca,
+                    crossDomain: true,
+                    dataType: 'jsonp',
+                    success: function(result) {}
+                });
+            } else {
+                alert("you need to select a category first");
+                this.checked = false;
+            }
+        }
+        this.checked = night;
 
     });
 });
@@ -84,7 +120,7 @@ function category(args) {
     var arg = args.results.bindings;
     for (var i = 0; i < arg.length; i++) {
         var cityname = arg[i].subject.value.split("#")[1];
-        cards += '<div class="card">' +
+        cards += '<div class="card flex-item">' +
             '<img src="' + cityname + '.jpg">' +
             '<a href="/activity?name=">' + cityname + " </a>" +
             '<p>' + cat + " </p>" +
@@ -102,7 +138,7 @@ function city(args) {
     var arg = args.results.bindings;
     for (var i = 0; i < arg.length; i++) {
         var cityname = arg[i].city.value.split("#")[1];
-        cards += '<div class="card">' +
+        cards += '<div class="card flex-item">' +
             '<img src="' + cityname + '.jpg">' +
             '<a href="/city?name=' + cityname + '">' + cityname + " </a>" +
             "</div>";
@@ -120,7 +156,7 @@ function activity(args) {
     var arg = args.results.bindings;
     for (var i = 0; i < arg.length; i++) {
         var activityname = arg[i].activity.value.split("#")[1];
-        cards += '<div class="card">' +
+        cards += '<div class="card flex-item">' +
             '<img src="' + cat + '.jpg">' +
             '<a href="/activity?name=' + activityname + '">' + activityname + " </a>" +
             "<p>" + cat + "</p>" +

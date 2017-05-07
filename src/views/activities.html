@@ -54,16 +54,6 @@
             </li>
             <li>
                 <div class="dropdown maxprice">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Open during
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#">day time</a></li>
-                        <li><a href="#">night time</a></li>
-                    </ul>
-                </div>
-            </li>
-            <li>
-                <div class="dropdown maxprice">
                     <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Max Price
                         <span class="caret"></span></button>
                     <ul class="dropdown-menu">
@@ -73,6 +63,16 @@
                         <li><a href="#">1000</a></li>
                         <li><a href="#">2000</a></li>
                     </ul>
+                </div>
+            </li>
+            <li>
+                <input type="number" min="0" step="1" class="form-control" id="duration" placeholder="Duration">
+            </li>
+            <li>
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox" value=""> Night
+                    </label>
                 </div>
             </li>
         </ul>
