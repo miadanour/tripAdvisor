@@ -28,6 +28,7 @@ public class ServerImpl {
 		// query 17 goes to query 6 with category parameter as Entertainment
 		// query 18 goes to query 6 with category=Entertainment and maxPrice=value
 		// query 19 goes to query 6 with category=Entertainment and duration=value
+		// query 20 goes to query 15 with category=Food and duration=value
 		
 		server.start();
 	}
